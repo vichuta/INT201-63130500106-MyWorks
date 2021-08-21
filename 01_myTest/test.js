@@ -1,6 +1,6 @@
-var x = "var";
-let y = "let";
-const z = "con";
+var x = "var"; // re-declared and update ได้
+let y = "let"; // re-declared ไม่ได้
+const z = "con";// re-declared or update ไม่ได้ (แก้ไขไม่ได้)
 
 console.log(x);
 console.log(y);
