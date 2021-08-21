@@ -136,15 +136,21 @@ JavaScript types can be divided into two categories:
           //msg is function scoped, we cannot access the variable msg outside of a function
           let msg = 'hello';
           let greeting = 'Good morning';
-          console.log(`greeting in function is ${greeting}`);
+          console.log(`greeting in function is ${greeting}`); //ปริ้นท์ greeting ตัวที่ประกาศใน function
         }
         // console.log(msg); //error: msg is not defined
         greeter();
-        console.log(greeting);
+        console.log(greeting); //ปริ้นท์ greeting ตัวที่ประกาศนอก function
 
         let year = 'leap';
         if (year === 'leap') greeting = 'Hey 366 days';
         console.log(greeting);
-    ```
+   ```
+> Output
+   ```
+   greeting in function is Good morning
+   Ho Ho
+   Hey 366 days
+   ```
 ### const
 
