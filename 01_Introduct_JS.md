@@ -10,13 +10,13 @@
   * BOM : The Browser Object Model คือ เอกสารที่ถูก link ไปบน Browser ต่างๆ
 
 
-## Asynchronous vs. Synchronous Programming
+## Synchronous vs. Asynchronous Programming
   * **Synchronous** tasks are performed one at a time and only when one is completed, the following is unblocked
   * **Asynchronous** task be performed alongside the original task (or tasks), without stopping to wait for the task to complete. When the secondary task is completed, the original task is notified using an agreed-upon mechanism so that it knows the work is done, and that the result, if any, is available.
     > **Asynchronous Callback Functions** is a function that is passed into another function as an argument. 
       ```javascript
         console.log('Hello’);
-        setTimeout(function () {console.log('JS');}, 5000);
+        setTimeout(function () {console.log('JS');}, 5000); ---Asynchronous
         console.log('Bye bye');   
       ```
       #### Output
