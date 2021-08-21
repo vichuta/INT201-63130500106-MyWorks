@@ -153,13 +153,13 @@ JavaScript types can be divided into two categories:
    Hey 366 days
    ```
 ### const
-    ```JavaScript
-        * เหมือน let แต่ re-declared and updated **ไม่ได้!**
-        > Example for const
+* เหมือน let แต่ re-declared and updated **ไม่ได้!**
+> Example for const 
+```JavaScript
         /*const variables*/
         const greeting = 'Hey';
         //const variables cannot be re-declared
         // const greeting = 'Ho Ho';
         //const variables cannot be updated
         // greeting = 'Hi Hi';
-    ```
+```
