@@ -16,7 +16,7 @@
     > **Asynchronous Callback Functions** is a function that is passed into another function as an argument. 
       ```javascript
         console.log('Hello’);
-        setTimeout(function () {console.log('JS');}, 5000); ---Asynchronous
+        setTimeout(function () {console.log('JS');}, 5000); //Asynchronous
         console.log('Bye bye');   
       ```
       #### Output
