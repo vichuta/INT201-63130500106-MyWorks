@@ -123,5 +123,28 @@ JavaScript types can be divided into two categories:
         greeting = 'Ho Ho’;
    ```
 ### let
+* let is block scoped
+    > หมายความว่า ถ้า let ประกาศตัวแปรใน function นั้นแล้ว จะไม่สามารถเรียกใช้ตัวแปรนั้น นอก function นี้ได้
+* can be updated but not re-declared.
+> Example for let variables
+   ```JavaScript
+        //greeting is block scope,
+        let greeting = 'Hey';
+        //let variables cannot be re-declared, only can be updated
+        greeting = 'Ho Ho';
+        function greeter() {
+          //msg is function scoped, we cannot access the variable msg outside of a function
+          let msg = 'hello';
+          let greeting = 'Good morning';
+          console.log(`greeting in function is ${greeting}`);
+        }
+        // console.log(msg); //error: msg is not defined
+        greeter();
+        console.log(greeting);
+
+        let year = 'leap';
+        if (year === 'leap') greeting = 'Hey 366 days';
+        console.log(greeting);
+    ```
 ### const
 
