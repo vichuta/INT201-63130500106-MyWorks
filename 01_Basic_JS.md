@@ -154,7 +154,7 @@ JavaScript types can be divided into two categories:
    ```
 ### const
 * เหมือน let แต่ re-declared and updated **ไม่ได้!**
-> Example for const 
+> หมายความว่า ถ้าประกาศตัวแปรด้วย const แล้วจะไม่สามารถแก้ไขค่าของตัวแปรนั้นได้อีก
 ```JavaScript
         /*const variables*/
         const greeting = 'Hey';
