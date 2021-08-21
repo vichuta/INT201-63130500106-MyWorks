@@ -125,7 +125,7 @@ JavaScript types can be divided into two categories:
 ### let
 * let is block scoped
     > หมายความว่า ถ้า let ประกาศตัวแปรใน function นั้นแล้ว จะไม่สามารถเรียกใช้ตัวแปรนั้น นอก function นี้ได้
-* can be updated but not re-declared.
+* let can be updated but *not re-declared.*
 > Example for let variables
    ```JavaScript
         //greeting is block scope,
@@ -148,9 +148,18 @@ JavaScript types can be divided into two categories:
    ```
 > Output
    ```
-   greeting in function is Good morning
-   Ho Ho
+   greeting in function is Good morning 
+   Ho Ho 
    Hey 366 days
    ```
 ### const
-
+    ```JavaScript
+        * เหมือน let แต่ re-declared and updated **ไม่ได้!**
+        > Example for const
+        /*const variables*/
+        const greeting = 'Hey';
+        //const variables cannot be re-declared
+        // const greeting = 'Ho Ho';
+        //const variables cannot be updated
+        // greeting = 'Hi Hi';
+    ```
