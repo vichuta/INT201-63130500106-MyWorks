@@ -110,7 +110,7 @@
 ## Variables (การประกาศตัวแปร)
 ### var
 * var variables can to use globally scoped or function scoped 
-  > หมายความว่า ไม่ว่าจะประกาศตัวแปร อยู่ข้างนอก หรือ ข้างใน function ก็สามารถเรียกใช้ตัวแปรที่ถูกประกาศด้วย var ได้ทุกที่
+  * ไม่ว่าจะประกาศตัวแปร อยู่ข้างนอก หรือ ข้างใน function ก็สามารถเรียกใช้ตัวแปรที่ถูกประกาศด้วย var ได้ทุกที่
 * var variables can be re-declared and updated
 > re-declared (ประกาศตัวแปรชื่อซ้ำ)
    ```JavaScript
@@ -124,28 +124,27 @@
    ```
 ### let
 * let is block scoped
-    > หมายความว่า ถ้า let ประกาศตัวแปรใน function นั้นแล้ว จะไม่สามารถเรียกใช้ตัวแปรนั้น นอก function นี้ได้
 * let can be updated but *not re-declared.*
-> Example for let variables
-   ```JavaScript
-        //greeting is block scope,
-        let greeting = 'Hey';
-        //let variables cannot be re-declared, only can be updated
-        greeting = 'Ho Ho';
-        function greeter() {
-          //msg is function scoped, we cannot access the variable msg outside of a function
-          let msg = 'hello';
-          let greeting = 'Good morning';
-          console.log(`greeting in function is ${greeting}`); //ปริ้นท์ greeting ตัวที่ประกาศใน function
-        }
-        // console.log(msg); //error: msg is not defined
-        greeter();
-        console.log(greeting); //ปริ้นท์ greeting ตัวที่ประกาศนอก function
+    > ถ้าใช้ let ประกาศตัวแปรใน function นั้นแล้ว จะไม่สามารถเรียกใช้ตัวแปรนั้น นอก function นี้ได้
+```JavaScript
+   //greeting is block scope,
+   let greeting = 'Hey';
+   //let variables cannot be re-declared, only can be updated
+   greeting = 'Ho Ho';
+   function greeter() {
+   //msg is function scoped, we cannot access the variable msg outside of a function
+   let msg = 'hello';
+   let greeting = 'Good morning';
+   console.log(`greeting in function is ${greeting}`); //ปริ้นท์ greeting ตัวที่ประกาศใน function
+   }
+   // console.log(msg); //error: msg is not defined
+   greeter();
+   console.log(greeting); //ปริ้นท์ greeting ตัวที่ประกาศนอก function
 
-        let year = 'leap';
-        if (year === 'leap') greeting = 'Hey 366 days';
-        console.log(greeting);
-   ```
+   let year = 'leap';
+   if (year === 'leap') greeting = 'Hey 366 days';
+   console.log(greeting);
+```
 > Output
    ```
    greeting in function is Good morning 
@@ -153,9 +152,8 @@
    Hey 366 days
    ```
 ### const
-เหมือน let แต่ re-declared and updated **ไม่ได้!**
-
-ถ้าประกาศตัวแปรด้วย const แล้วจะไม่สามารถแก้ไขค่าของตัวแปรนั้นได้อีก
+* เหมือน let แต่ re-declared and updated **ไม่ได้!**
+* ถ้าประกาศตัวแปรด้วย const แล้วจะไม่สามารถแก้ไขค่าของตัวแปรนั้นได้อีก
 ```JavaScript
         /*const variables*/
         const greeting = 'Hey';
