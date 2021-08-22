@@ -16,15 +16,14 @@
     console.log (variable);
 ```
 ## Types, Values, and Variables
-### Types
+   ### Types
    แบ่งออกเป็น 2 ประเภท
-#### 1.primitive types
+   #### 1. primitive types
    * number - including integer and floating-point numbers between -2^53 to 2^53
    * string (รวมถึง char)
    * boolean 
-    
     > Example for primitive types
-    ```javascript
+   ```javascript
         let myNum = 0;
         console.log(`type of myNum is ${typeof myNum}`);
 
@@ -42,21 +41,21 @@
 
         let myNull = null;
         console.log(`type of myNull is ${typeof myNull}`);
-    ```
-    > Output
-    ```
+  ```
+   > Output
+                
         type of myNum is number
         type of myString is string
         type of myBool is boolean
         type of myUndefined is undefined
         type of mySymbol is symbol
         type of myNull is object
-    ```
+        
 #### 2. object types  _เป็น Object ซ้อน Object ก็ได้_
    * An object (that is, a member of the type object) is a collection of properties where each property has a name and a value (either a primitive value or another object)
    * a special kind of object, known as an array, that represents an ordered collection of numbered values
        > Example for object type
-    ```JavaScript
+   ```JavaScript
         //Object Type Simple
         let myObj = {id: 1,task: 'grading exam'};
         let myObj2 = {id: 1,task: 'grading exam'};
@@ -82,9 +81,9 @@
         let c = [1];
         console.log(`a === b is ${a === b}`);
         console.log(`b == c is ${b == c}`);
-    ```
-    > Output
-    ```
+  ```
+   > Output
+  
         {"id":1,"task":"grading exam"}
         type of myObj is object
         {"id":1,"task":"grading exam"}
@@ -96,18 +95,17 @@
         type of myArr is object
         a === b is true
         b == c is false
-  ```
 
 ### Values
-   _Primitive value_
-    * number
-    * string
-    * boolean
-    * null (special type) มี Type เป็น **object type** 
-        * NULL คือ ค่าของตัวแปรที่ตั้งไว้ เก็บค่าอื่นจะเพิ่มเข้าทีหลัง
-    * undefined (special type) 
-        * UNDEFINED คือ ค่าของตัวแปรที่ตั้งไว้ แต่ยังไม่รู้ว่าจะเก็บค่าอะไร
-    * symbol (special type) = unistring (คือ string แบบไม่ซ้ำ)
+#### Primitive value
+   * number
+   * string
+   * boolean
+   * null (special type) มี Type เป็น **object type** 
+        > NULL คือ ค่าของตัวแปรที่ตั้งไว้ เก็บค่าอื่นจะเพิ่มเข้าทีหลัง
+   * undefined (special type) 
+        > UNDEFINED คือ ค่าของตัวแปรที่ตั้งไว้ แต่ยังไม่รู้ว่าจะเก็บค่าอะไร
+   * symbol (special type) = unistring (คือ string แบบไม่ซ้ำ)
     
 ### Variables (การประกาศตัวแปร)
 #### var
