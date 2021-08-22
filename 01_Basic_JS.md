@@ -15,10 +15,10 @@
 ```javascript
     console.log (variable);
 ```
-## Types, Values, and Variables
-   ### Types
+# Types, Values, and Variables
+   ## Types
    แบ่งออกเป็น 2 ประเภท
-   #### 1. primitive types
+   ### 1. primitive types
    * number - including integer and floating-point numbers between -2^53 to 2^53
    * string (รวมถึง char)
    * boolean 
@@ -51,7 +51,7 @@
         type of mySymbol is symbol
         type of myNull is object
         
-#### 2. object types  _เป็น Object ซ้อน Object ก็ได้_
+### 2. object types  _เป็น Object ซ้อน Object ก็ได้_
    * An object (that is, a member of the type object) is a collection of properties where each property has a name and a value (either a primitive value or another object)
    * a special kind of object, known as an array, that represents an ordered collection of numbered values
        > Example for object type
@@ -96,8 +96,8 @@
         a === b is true
         b == c is false
 
-### Values
-#### Primitive value
+## Values
+### Primitive value
    * number
    * string
    * boolean
@@ -107,8 +107,8 @@
         > UNDEFINED คือ ค่าของตัวแปรที่ตั้งไว้ แต่ยังไม่รู้ว่าจะเก็บค่าอะไร
    * symbol (special type) = unistring (คือ string แบบไม่ซ้ำ)
     
-### Variables (การประกาศตัวแปร)
-#### var
+## Variables (การประกาศตัวแปร)
+### var
 * var variables can to use globally scoped or function scoped 
   > หมายความว่า ไม่ว่าจะประกาศตัวแปร อยู่ข้างนอก หรือ ข้างใน function ก็สามารถเรียกใช้ตัวแปรที่ถูกประกาศด้วย var ได้ทุกที่
 * var variables can be re-declared and updated
@@ -122,7 +122,7 @@
         var greeting = 'Hey’;
         greeting = 'Ho Ho’;
    ```
-#### let
+### let
 * let is block scoped
     > หมายความว่า ถ้า let ประกาศตัวแปรใน function นั้นแล้ว จะไม่สามารถเรียกใช้ตัวแปรนั้น นอก function นี้ได้
 * let can be updated but *not re-declared.*
@@ -152,9 +152,10 @@
    Ho Ho 
    Hey 366 days
    ```
-#### const
-* เหมือน let แต่ re-declared and updated **ไม่ได้!**
-> หมายความว่า ถ้าประกาศตัวแปรด้วย const แล้วจะไม่สามารถแก้ไขค่าของตัวแปรนั้นได้อีก
+### const
+เหมือน let แต่ re-declared and updated **ไม่ได้!**
+
+ถ้าประกาศตัวแปรด้วย const แล้วจะไม่สามารถแก้ไขค่าของตัวแปรนั้นได้อีก
 ```JavaScript
         /*const variables*/
         const greeting = 'Hey';
