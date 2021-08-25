@@ -6,7 +6,7 @@ console.log(x);
 console.log(y);
 console.log(z);
 
-
+let v = 0;
 let a = 1;
 a = 3;
 function A(){
