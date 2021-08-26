@@ -67,7 +67,7 @@
 ```
 * Statement can take up multiple lines
 * Comment
-```
+```javascript
     //Single Line Comment
     /* … */ Single or Multiple Lines Comment
 ```
