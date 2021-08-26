@@ -135,11 +135,11 @@
    //msg is function scoped, we cannot access the variable msg outside of a function
    let msg = 'hello';
    let greeting = 'Good morning';
-   console.log(`greeting in function is ${greeting}`); //ปริ้นท์ greeting ตัวที่ประกาศใน function
+   console.log(`greeting in function is ${greeting}`); //greeting = 'Good morning';
    }
    // console.log(msg); //error: msg is not defined
    greeter();
-   console.log(greeting); //ปริ้นท์ greeting ตัวที่ประกาศนอก function
+   console.log(greeting); //greeting = 'Ho ho'
 
    let year = 'leap';
    if (year === 'leap') greeting = 'Hey 366 days';
@@ -147,8 +147,8 @@
 ```
 > Output
    ```
-   greeting in function is Good morning 
-   Ho Ho 
+   greeting in function is Good morning     //ปริ้นท์ greeting ตัวที่ประกาศใน function
+   Ho Ho                                    //ปริ้นท์ greeting ตัวที่ประกาศนอก function
    Hey 366 days
    ```
 ### const
@@ -162,3 +162,37 @@
         //const variables cannot be updated
         // greeting = 'Hi Hi';
 ```
+## The following is the list of keywords
+   - break
+   - do
+   - in
+   - typeof
+   - case
+   - else
+   - instanceof
+   - var
+   - catch
+   - export
+   - new
+   - void
+   - class
+   - extends
+   - return
+   - while
+   - const
+   - finally
+   - super  
+   - with
+   - continue
+   - for
+   - switch
+   - yield
+   - debugger  
+   - function  
+   - this
+   - default
+   - if
+   - throw
+   - delete
+   - import
+   - try
