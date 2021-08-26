@@ -10,7 +10,7 @@ let v = 0;
 let a = 1;
 a = 3;
 function A(){
-    let b = 2;
+    let b = 2;  //b เป็นตัวแปรใน block scope
     console.log(a);
     console.log(b);
 }
@@ -18,7 +18,7 @@ function A(){
 //console.log(b);
 function B(){
     console.log(a);
-    //console.log(b);
+    //console.log(b); //ใช้ใน function ไม่ได้
 }
 A();// 1 2
 B();// 1
