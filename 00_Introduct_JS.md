@@ -75,3 +75,40 @@
 ```javascript
     console.log (variable);
 ```
+## The following is the list of keywords
+   - break
+   - do
+   - in
+   - typeof
+   - case
+   - else
+   - instanceof
+   - var       = ประกาศตัวแปร
+   - catch
+   - export
+   - new
+   - void
+   - class
+   - extends
+   - return    = คืนค่า
+   - while
+   - const
+   - finally
+   - super  
+   - with
+   - continue
+   - for
+   - switch
+   - yield
+   - debugger  
+   - function  
+   - this
+   - default
+   - if
+   - throw
+   - delete
+   - import
+   - try
+
+
+
