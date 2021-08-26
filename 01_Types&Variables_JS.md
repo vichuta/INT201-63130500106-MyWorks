@@ -92,9 +92,9 @@
     
 ## Variables (การประกาศตัวแปร)
 ### var
-* var variables can to use globally scoped or function scoped 
+* ```var``` variables can to use globally scoped or function scoped 
   * ไม่ว่าจะประกาศตัวแปร อยู่ข้างนอก หรือ ข้างใน function ก็สามารถเรียกใช้ตัวแปรที่ถูกประกาศด้วย var ได้ทุกที่
-* var variables can be re-declared and updated
+* ```var``` variables can be re-declared and updated
 > re-declared (ประกาศตัวแปรชื่อซ้ำ)
    ```JavaScript
         var greeting = 'Hey’;
@@ -105,10 +105,10 @@
         var greeting = 'Hey’;
         greeting = 'Ho Ho’;
    ```
-### let
-* let is block scoped
-* let can be updated but *not re-declared.*
-    > ถ้าใช้ let ประกาศตัวแปรใน function นั้นแล้ว จะไม่สามารถเรียกใช้ตัวแปรนั้น นอก function นี้ได้
+### let 
+* ```let``` is block scoped
+* ```let``` can be updated but *not re-declared.*
+    > ถ้าใช้ ```let``` ประกาศตัวแปรใน function นั้นแล้ว จะไม่สามารถเรียกใช้ตัวแปรนั้น นอก function นี้ได้
 ```JavaScript
    //greeting is block scope,
    let greeting = 'Hey';
@@ -135,8 +135,8 @@
    Hey 366 days
    ```
 ### const
-* เหมือน let แต่ re-declared and updated **ไม่ได้!**
-* ถ้าประกาศตัวแปรด้วย const แล้วจะไม่สามารถแก้ไขค่าของตัวแปรนั้นได้อีก
+* เหมือน ```let``` แต่ re-declared and updated **ไม่ได้!**
+* ถ้าประกาศตัวแปรด้วย ```const``` แล้วจะไม่สามารถแก้ไขค่าของตัวแปรนั้นได้อีก
 ```JavaScript
         /*const variables*/
         const greeting = 'Hey';
