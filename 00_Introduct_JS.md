@@ -8,23 +8,29 @@
 #### **JavaScript ออกแบบมาเพื่อรองรับ DOM และ BOM**
   * DOM : The Document Object Model คือ เอกสารที่ถูก map รวมกันให้อยู่ในรูปของ Tree structure ตัวอย่าง HTML,CSS
   * BOM : The Browser Object Model คือ เอกสารที่ถูก link ไปบน Browser ต่างๆ
-
-
+----
 ## Synchronous vs. Asynchronous Programming
-  * **Synchronous** tasks are performed one at a time and only when one is completed, the following is unblocked
-  * **Asynchronous** task be performed alongside the original task (or tasks), without stopping to wait for the task to complete. When the secondary task is completed, the original task is notified using an agreed-upon mechanism so that it knows the work is done, and that the result, if any, is available.
-    > **Asynchronous Callback Functions** is a function that is passed into another function as an argument. 
-      ```javascript
+  ### Synchronous
+  **Synchronous** จะดำเนินการรันโปรแกรมทีละชุดคำสั่ง และจะไม่รันชุดคำสั่งต่อไปถ้ายังรันชุดคำสั่งปัจจุบันไม่จบ 
+  > _ตัวอย่างเช่น ถ้าโปรแกรมเรียกฟังก์ชัน A(); และ B(); ตามลำดับ โปรแกรมจะไม่รันฟังก์ชัน B(); จนกว่าฟังก์ชัน A(); จะทำงานเสร็จ_
+  ### Asynchronous 
+  **Asynchronous** จะดำเนินการรันโปรแกรมทีละชุดคำสั่ง และจะรันชุดคำสั่งถัดไปทันทีโดยไม่จำเป็นต้องรอชุดคำสั่งก่อนหน้าทำงานเสร็จ 
+  > _ตัวอย่างเช่น ถ้าโปรแกรมเรียกฟังก์ชัน A(); และ B(); ตามลำดับ โปรแกรมจะรันฟังก์ชัน A(); และ B(); ตามลำดับโดยไม่สนใจว่าฟังก์ชัน A(); 
+จะทำงานเสร็จรึยัง จะไปเรียกฟังก์ชัน B(); ต่อเลยทันที_
+  
+  **Asynchronous Callback Functions** is a function that is passed into another function as an argument. 
+```javascript
         console.log('Hello’);
-        setTimeout(function () {console.log('JS');}, 5000); //Asynchronous
+        setTimeout(function () {console.log('JS');}, 5000);     //Asynchronous
         console.log('Bye bye');   
-      ```
-      #### Output
-      ``` 
-          Hello //Console
-          Bye bye
-          JS //until 5 seconds
-      ```
+```
+#### Output
+``` 
+        Hello
+        Bye bye         
+        JS              //ทำเป็นอันสุดท้าย เพราะมี delay 5000 ms
+```
+----
 ## Higher-Order Functions
    คือ function อย่างหนึ่งของ JavaScript ที่สามารถรับค่า parameter หรือ return เป็น function ได้
    
@@ -50,4 +56,22 @@
         let multiplyResult = operator(5, 3, multiply)
         console.log(`add result3 : ${addResult3}`)
         console.log(`multiply result: ${multiplyResult}`)
+```
+------
+# Basic JavaScript Statements
+* Semicolon in the end of statement is an optional 
+    _แนะนำให้ใสเครื่องหมายปิดด้วยจะดีกว่า_
+```javascript
+    let y=20
+    let x=10; 
+```
+* Statement can take up multiple lines
+* Comment
+```
+    //Single Line Comment
+    /* … */ Single or Multiple Lines Comment
+```
+* Console Printing
+```javascript
+    console.log (variable);
 ```
