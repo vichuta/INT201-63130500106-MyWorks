@@ -145,37 +145,4 @@
         //const variables cannot be updated
         // greeting = 'Hi Hi';
 ```
-## The following is the list of keywords
-   - break
-   - do
-   - in
-   - typeof
-   - case
-   - else
-   - instanceof
-   - var
-   - catch
-   - export
-   - new
-   - void
-   - class
-   - extends
-   - return
-   - while
-   - const
-   - finally
-   - super  
-   - with
-   - continue
-   - for
-   - switch
-   - yield
-   - debugger  
-   - function  
-   - this
-   - default
-   - if
-   - throw
-   - delete
-   - import
-   - try
+
