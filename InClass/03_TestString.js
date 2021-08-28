@@ -1,4 +1,4 @@
-let text = "INT201 Client-side Web Programming I";
+let text = "Hello";
 let vowel=['A','E','I','O','U','a','e','i','o','u'];
 TestString(0,text);
 TestString(1,text);
@@ -27,8 +27,8 @@ function reverseString(str){
 
 //Replace Vowel with '*'
 function replaceString(str) {
-    for(let i=0; i<str.length; i++){
-        for(let j=0; j<vowel.length; j++){
+    for(let i=0; i<str.length; i++){ 
+        for(let j=0; j<vowel.length; j++){ 
             str = str.replace(vowel[j],'*');
             //replcae('a','b') = เปลี่ยน string ที่เป็น a ให้เป็น b ทั้งหมด
         }

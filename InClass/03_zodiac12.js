@@ -31,7 +31,7 @@ function Test(year) {
 }
 Test(2002);
 
-//แบบที่ 2 (ของตัส)
+//แบบที่ 2 (ของเพื่อน)
 let year = 1900;
 let zodiac = {  //สร้างเป็น object zodiac
     0: 'monkey',
