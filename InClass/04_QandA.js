@@ -1,5 +1,5 @@
-let AllQuestion = {
-    //คำถามและตัวเลือก
+ //คำถามและตัวเลือก
+let AllQuestion = {   
     Question1 : 'What is one?',
     Answer1 : {
         choice1 : 1, choice2 : 2, choice3 : 3, choice4 : 4, choice5 : 5
@@ -16,74 +16,62 @@ let AllQuestion = {
     Answer4 : {
         choice1 : 1, choice2 : 2, choice3 : 3, choice4 : 4, choice5 : 5
     },
-    Question5 : 'What is five?',
+    Question5 : 'What is Client-side Web Server?',
     Answer5 : {
-        choice1 : 1, choice2 : 2, choice3 : 3, choice4 : 4, choice5 : 5
+        choice1 : 'INT101', choice2 : 'INT207', choice3 : 'INT205', choice4 : 'INT202', choice5 : 'INT201'
     }
 };
 console.log(AllQuestion);
 
+//เฉลย
+let solution = [
+    AllQuestion.Answer1.choice1,
+    AllQuestion.Answer2.choice2,
+    AllQuestion.Answer3.choice3,
+    AllQuestion.Answer4.choice4,
+    AllQuestion.Answer5.choice5
+];
 
-function Player(name){
-    this.name = name;
-    this.score = 0;
-    this.quest = [1,2,3,4,5]; 
-    this.myAns = [0,0,0,0,0]; // 0 = แปลว่ายังไม่ได้ตอบ
-    this.playing =  function(Q,A){ //ต้องใส่เลขข้อให้ถูก แต่คำตอบใส่เป็นอะไรก็ได้
-        let index = Q-1;
-        switch(Q){
-            case 1 : 
-                if(this.myAns[index] == 0 || this.myAns[index] != AllQuestion.Answer1.choice1){ //ถ้าใน myAns ยังไม่ได้ตอบ หรือ ยังตอบไม่ถูก
-                    if(A==AllQuestion.Answer1.choice1){ //ถ้าคำตอบตรงกับเฉลย
-                        addScore(this,index,A);         //เพิ่มคะแนน
-                    }else{                              //แต่ถ้าไม่ตรง 
-                        addAns(this,index,A);           //ให้เพิ่มคำตอบลง myAns
-                    }
-                }    
-            break;
-            case 2 : 
-                if(this.myAns[index] == 0 || this.myAns[index] != AllQuestion.Answer2.choice2){
-                    if(A==AllQuestion.Answer2.choice2){
-                        addScore(this,index,A);
-                    }else{
-                        addAns(this,index,A);
-                    }
-                } 
-            break;
-            case 3 : 
-                if(this.myAns[index] == 0 || this.myAns[index] != AllQuestion.Answer3.choice3){
-                    if(A==AllQuestion.Answer3.choice3){
-                        addScore(this,index,A);
-                    }else{
-                        addAns(this,index,A);
-                    }
-                }    
-            break;
-            case 4 : 
-                if(this.myAns[index] == 0 || this.myAns[index] != AllQuestion.Answer4.choice4){
-                    if(A==AllQuestion.Answer4.choice4){
-                        addScore(this,index,A);
-                    }else{
-                        addAns(this,index,A);
-                    }
-                }    
-            break;
-            case 5 : 
-                if(this.myAns[index] == 0 || this.myAns[index] != AllQuestion.Answer5.choice5){
-                    if(A==AllQuestion.Answer5.choice5){
-                        addScore(this,index,A);
-                    }else{
-                        addAns(this,index,A);
-                    }
-                }    
-            break;
-        }};
-    function addScore(Player,index,A){
-        Player.score++;
-        addAns(Player,index,A);
-    };
-    function addAns(Player,index,A){
-        Player.myAns[index]=A;
+class Player {
+    constructor(name) {
+        this.name = name;
+        this.score = 0;
+        this.quest = 5; // จำนวนคำถาม
+        this.myAns = [0, 0, 0, 0, 0]; // 0 = แปลว่ายังไม่ได้ตอบ
+        this.playing = function (Q, A) {
+            let index = Q - 1;
+            switch (Q) {
+                case 1: addAns(this, index, A);
+                    recheckScore(this);
+                    break;
+                case 2: addAns(this, index, A);
+                    recheckScore(this);
+                    break;
+                case 3: addAns(this, index, A);
+                    recheckScore(this);
+                    break;
+                case 4: addAns(this, index, A);
+                    recheckScore(this);
+                    break;
+                case 5: addAns(this, index, A);
+                    recheckScore(this);
+                    break;
+            }
+        };
+
+        function addAns(Player, index, A) { //เพิ่มคำตอบใน myAns
+            Player.myAns[index] = A;
+            return Player;
+        }
+        function recheckScore(Player) { //นับคะแนน
+            Player.score = 0;
+            for (let i = 0; i < Player.quest; i++) {
+                if (solution[i] == Player.myAns[i]) {
+                    Player.score += 1;
+                }
+            }
+            return Player.score;
+        }
     }
 }
 
@@ -95,26 +83,18 @@ player1.playing(4,3);
 player1.playing(5,'อะไรวะ');
 console.log(player1);//score=1
 player1.playing(1,3);
-player1.playing(2,4);//ถ้าตอบถูกแล้วจะเปลี่ยนคำตอบไม่ได้
+player1.playing(2,4);
 player1.playing(3,3);
 player1.playing(4,4);
 player1.playing(5,true);
-console.log(player1);//score=3
+console.log(player1);//score=2
 player1.playing(1,1);
+player1.playing(2,2);
+player1.playing(4,2);
 player1.playing(5,5);
-console.log(player1);//score=5
+console.log(player1);//score=3
+player1.playing(5,'INT201');
+console.log(player1);//score=4
 
 
-/* 
-//นับคะแนนจากการเปรียบเทียบ ans array กับ solution array ยังไง???
-//เพราะจะเปลี่ยนคำตอบได้เรื่อยๆ
-let solution = 
-    [AllQuestion.Answer1.choice1,
-    AllQuestion.Answer2.choice2,
-    AllQuestion.Answer3.choice3];
-    
-    function checkscore(){
-        //???
-    }
-    */
 
