@@ -43,11 +43,25 @@ null * 1    //0 (null มีค่าเป็น 0)
     //String จะเปลี่ยนเป็น Number
     //Boolean จะเปลี่ยนเป็น Number
 1 == true   //true      [เปลี่ยน true เป็น 1]
-"1" == []   //false     [Number("1") == Number([])]
+"1" == []   //false     ["1"== String([]) ---> "1" = ""]
 "1" == 1    //true      [Number("1") เปลี่ยน String เป็น Number]
-1 == null   //false     [Number(null)]                          **Error null ???
+1 == null   //false     
 "1" == undefined    //false [Number(undefined)==NaN]
 null == undefined   //true***  
 //2. strict equality -- ถ้ามีการ conversions จะ false ทันที
 
 //Compare String
+
+
+
+//ธรรมเนียมการตั้งชื่อ ควรตั้งชื่อที่สื่อความหมาย
+myVarible //camel case
+myMethod
+myFunction
+myObject
+
+//การสร้าง function
+function doSometing(){
+    //console.log(someValue);   //ไม่ควรปริ้นค่าใน function
+    return someValue            //ควร return ค่าให้นำไปใช้ต่อได้ น่าจะดีกว่า
+}
