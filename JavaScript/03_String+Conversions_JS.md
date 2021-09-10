@@ -1,11 +1,6 @@
 # JavaScript String
-<<<<<<< HEAD
-    รวม function ของ String >> https://www.w3schools.com/jsref/jsref_obj_string.asp
-    
-=======
   รวม function ของ String : <https://www.w3schools.com/jsref/jsref_obj_string.asp>
   > ตัวอย่าง JavaScript String
->>>>>>> c3ad806aebd95568f218428b1c8f4f8fe3dacfd5
 ```JavaScript
     //String Function
     let msg = 'JS';
@@ -29,13 +24,13 @@
     console.log(`Hello ${msg.charAt(1)}`)   //Hello s
 ```
 # Type Conversions
-## 1.Explicit Conversions = แปลง type ด้วย function
+## 1. Explicit Conversions = แปลง type ด้วย function
 ```JavaScript
     Number('3');    //3
     String(false);  //"false"
     Boolean([]);    //true
 ```
-## 2.Implicit Conversions = แปลง type ให้อัตโนมัติ
+## 2. Implicit Conversions = แปลง type ให้อัตโนมัติ
 ```JavaScript
     'a' + 1     //'a1'  (เปลี่ยน Number -> String)
     '5' * '4'   //20    (เปลี่ยน String -> Number)
