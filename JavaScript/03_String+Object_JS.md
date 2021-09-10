@@ -23,20 +23,6 @@
     console.log(`Hello ${true && false}`)   //Hello false
     console.log(`Hello ${msg.charAt(1)}`)   //Hello s
 ```
-# Type Conversions
-## 1. Explicit Conversions = แปลง type ด้วย function
-```JavaScript
-    Number('3');    //3
-    String(false);  //"false"
-    Boolean([]);    //true
-```
-## 2. Implicit Conversions = แปลง type ให้อัตโนมัติ
-```JavaScript
-    'a' + 1     //'a1'  (เปลี่ยน Number -> String)
-    '5' * '4'   //20    (เปลี่ยน String -> Number)
-    true + 1    //2     (true มีค่าเป็น 1)
-    false +1    //1     (false มีค่าเป็น 0)
-    null * 1    //0     (null มีค่าเป็น 0)
-```
+
 
 
