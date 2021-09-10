@@ -1,6 +1,11 @@
 # JavaScript String
+<<<<<<< HEAD
     รวม function ของ String >> https://www.w3schools.com/jsref/jsref_obj_string.asp
     
+=======
+  รวม function ของ String : <https://www.w3schools.com/jsref/jsref_obj_string.asp>
+  > ตัวอย่าง JavaScript String
+>>>>>>> c3ad806aebd95568f218428b1c8f4f8fe3dacfd5
 ```JavaScript
     //String Function
     let msg = 'JS';
@@ -12,9 +17,9 @@
     //Immutable คือ ไม่ได้เปลี่ยนเปลี่ยนค่า msg แต่ return ตามค่า function LowerCase เป็น String ตัวใหม่
     msg                         //'JS' 
     msg.substring(0,2);         //เริ่มที่ 0 จบที่ 2 = 'S'
-    msg=msg.toLocaleLowerCase();//'js'
-    console.log("Hello" + msg)  //Hellojs
-    console.log(`Hello everyone, 'section' ${msg}`) // ใช้ ` ช่วยประหยัดการใช้ + ต่อคำ
+    msg=msg.toLocaleLowerCase();    //'js'
+    console.log("Hello" + msg)      //Hellojs
+    console.log(`Hello everyone, 'section' ${msg}`) // ใช้ ` ` ช่วยประหยัดการใช้ + ต่อคำ
     console.log(`Hello          
     World`)                     //Hello
                                 //World (ขึ้นบรรทัดใหม่ได้)
