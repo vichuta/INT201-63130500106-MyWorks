@@ -1,13 +1,8 @@
 # Introduction to JavaScript
 ### JavaScript Language Features
-  * Interpreted Language - อ่านทีละบรรทัด
-  * Single Threaded, do one operation at one time
-  * Dynamically and weakly typed language - สามารถเปลี่ยนแปลงค่าของตัวแปร และ typr ของตัวแปรได้อิสระ
-  * Support Object Oriented Programming (Prototyped-based) - รองรับการสร้าง Object (OOP)
- 
-#### **JavaScript ออกแบบมาเพื่อรองรับ DOM และ BOM**
-  * DOM : The Document Object Model คือ เอกสารที่ถูก map รวมกันให้อยู่ในรูปของ Tree structure ตัวอย่าง HTML,CSS
-  * BOM : The Browser Object Model คือ เอกสารที่ถูก link ไปบน Browser ต่างๆ
+  * เป็น Dynamically language สามารถเปลี่ยนแปลงค่าของตัวแปร และ type ของตัวแปรได้อิสระ
+  * Support Object Oriented Programming (Prototyped-based) - สนับสนุนการเขียนแบบ OOP
+  * รองรับ DOM(Document Object Model) และ BOM(Browser Object Model)
 ----
 ## Synchronous vs. Asynchronous Programming
   ### Synchronous
