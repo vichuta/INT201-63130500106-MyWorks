@@ -4,6 +4,23 @@
   * Support Object Oriented Programming (Prototyped-based) - สนับสนุนการเขียนแบบ OOP
   * รองรับ DOM(Document Object Model) และ BOM(Browser Object Model)
 ----
+# Basic JavaScript Statements
+* Semicolon in the end of statement is an optional 
+    _แนะนำให้ใสเครื่องหมายปิดด้วยจะดีกว่า_
+```javascript
+    let y=20
+    let x=10; 
+```
+* Statement can take up multiple lines
+* Comment
+```javascript
+    //Single Line Comment
+    /* … */ Single or Multiple Lines Comment
+```
+* Console Printing
+```javascript
+    console.log (variable);
+```
 ## Synchronous vs. Asynchronous Programming
   ### Synchronous
   **Synchronous** จะดำเนินการรันโปรแกรมทีละชุดคำสั่ง และจะไม่รันชุดคำสั่งต่อไปถ้ายังรันชุดคำสั่งปัจจุบันไม่จบ 
@@ -53,23 +70,7 @@
         console.log(`multiply result: ${multiplyResult}`)
 ```
 ------
-# Basic JavaScript Statements
-* Semicolon in the end of statement is an optional 
-    _แนะนำให้ใสเครื่องหมายปิดด้วยจะดีกว่า_
-```javascript
-    let y=20
-    let x=10; 
-```
-* Statement can take up multiple lines
-* Comment
-```javascript
-    //Single Line Comment
-    /* … */ Single or Multiple Lines Comment
-```
-* Console Printing
-```javascript
-    console.log (variable);
-```
+
 
 
 
