@@ -3,32 +3,33 @@
   * เป็น Dynamically language สามารถเปลี่ยนแปลงค่าของตัวแปร และ type ของตัวแปรได้อิสระ
   * Support Object Oriented Programming (Prototyped-based) - สนับสนุนการเขียนแบบ OOP
   * รองรับ DOM(Document Object Model) และ BOM(Browser Object Model)
+  * Function มีสถานะเทียบเท่า Data
 ----
 # Basic JavaScript Statements
-* Semicolon in the end of statement is an optional 
-    _แนะนำให้ใสเครื่องหมายปิดด้วยจะดีกว่า_
+* การเขียน statement ทั่วไป
 ```javascript
     let y=20
-    let x=10; 
+    let x=10; //ควรใส่เครื่องหมายปิด
 ```
-* Statement can take up multiple lines
-* Comment
+* การเขียน Comment
 ```javascript
     //Single Line Comment
     /* … */ Single or Multiple Lines Comment
 ```
 * Console Printing
 ```javascript
-    console.log (variable);
+    let variable = 'Hello World';
+    console.log (variable);                 //'Hello World'
+    console.log (`Result : ${variable}`);   //Result : Hello World
 ```
 ## Synchronous vs. Asynchronous Programming
   ### Synchronous
   **Synchronous** จะดำเนินการรันโปรแกรมทีละชุดคำสั่ง และจะไม่รันชุดคำสั่งต่อไปถ้ายังรันชุดคำสั่งปัจจุบันไม่จบ 
-  > _ตัวอย่างเช่น ถ้าโปรแกรมเรียกฟังก์ชัน A(); และ B(); ตามลำดับ โปรแกรมจะไม่รันฟังก์ชัน B(); จนกว่าฟังก์ชัน A(); จะทำงานเสร็จ_
+  > ตัวอย่างเช่น ถ้าโปรแกรมเรียกฟังก์ชัน A(); และ B(); ตามลำดับ โปรแกรมจะไม่รันฟังก์ชัน B(); จนกว่าฟังก์ชัน A(); จะทำงานเสร็จ
   ### Asynchronous 
   **Asynchronous** จะดำเนินการรันโปรแกรมทีละชุดคำสั่ง และจะรันชุดคำสั่งถัดไปทันทีโดยไม่จำเป็นต้องรอชุดคำสั่งก่อนหน้าทำงานเสร็จ 
-  > _ตัวอย่างเช่น ถ้าโปรแกรมเรียกฟังก์ชัน A(); และ B(); ตามลำดับ โปรแกรมจะรันฟังก์ชัน A(); และ B(); ตามลำดับโดยไม่สนใจว่าฟังก์ชัน A(); 
-จะทำงานเสร็จรึยัง จะไปเรียกฟังก์ชัน B(); ต่อเลยทันที_
+  > ตัวอย่างเช่น ถ้าโปรแกรมเรียกฟังก์ชัน A(); และ B(); ตามลำดับ โปรแกรมจะรันฟังก์ชัน A(); และ B(); ตามลำดับโดยไม่สนใจว่าฟังก์ชัน A(); 
+จะทำงานเสร็จรึยัง จะไปเรียกฟังก์ชัน B(); ต่อเลยทันที
   
   **Asynchronous Callback Functions** is a function that is passed into another function as an argument. 
 ```javascript
@@ -44,30 +45,30 @@
 ```
 ----
 ## Higher-Order Functions
-   คือ function อย่างหนึ่งของ JavaScript ที่สามารถรับค่า parameter หรือ return เป็น function ได้
+   คือ ```function``` อย่างหนึ่งของ JavaScript ที่สามารถรับค่า parameter หรือ return เป็น function ได้
    
 ```javascript
-      //1. store functions in variables
         function add(n1, n2) {
           return n1 + n2
         }
-        let sum = add
+    // 1. เก็บ fucntion ไว้ในตัวแปรได้
+        let sum = add // 1.
         let addResult1 = add(10, 20)
         let addResult2 = sum(10, 20)
-        console.log(`add result1: ${addResult1}`)
-        console.log(`add result2: ${addResult2}`)
-      //2. returned as a value from another function
+        console.log(`add result1: ${addResult1}`) //add result1: 30
+        console.log(`add result2: ${addResult2}`) //add result2: 30
+    //2. return ค่าเป็น value จาก function ได้
         function operator(n1, n2, fn) {
-          return fn(n1, n2)
+          return fn(n1, n2) 
         }
-      //3. Passing a function to another function
+    //3. รับค่า parameter เป็น function ได้
         function multiply(n1, n2) {
           return n1 * n2
         }
         let addResult3 = operator(5, 3, add)
         let multiplyResult = operator(5, 3, multiply)
-        console.log(`add result3 : ${addResult3}`)
-        console.log(`multiply result: ${multiplyResult}`)
+        console.log(`add result3 : ${addResult3}`)         //add result3: 8
+        console.log(`multiply result: ${multiplyResult}`)  //multiply result: 15
 ```
 ------
 

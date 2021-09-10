@@ -110,19 +110,16 @@
 * ```let``` can be updated but *not re-declared.*
     > ถ้าใช้ ```let``` ประกาศตัวแปรใน function นั้นแล้ว จะไม่สามารถเรียกใช้ตัวแปรนั้น นอก function นี้ได้
 ```JavaScript
-   //greeting is block scope,
-   let greeting = 'Hey';
-   //let variables cannot be re-declared, only can be updated
-   greeting = 'Ho Ho';
+   let greeting = 'Hey';   //greeting is block scope,
+   greeting = 'Ho Ho';     //update ค่าได้ (แต่ re-declared ไม่ได้)
    function greeter() {
-   //msg is function scoped, we cannot access the variable msg outside of a function
-   let msg = 'hello';
-   let greeting = 'Good morning';
-   console.log(`greeting in function is ${greeting}`); //greeting = 'Good morning';
+      let msg = 'hello';   //msg is function scoped
+      let greeting = 'Good morning';
+      console.log(`greeting in function is ${greeting}`);   //greeting = 'Good morning';
    }
-   // console.log(msg); //error: msg is not defined
+   //console.log(msg);       //error : เรียกใช้ตัวแปรใน function ไม่ได้
    greeter();
-   console.log(greeting); //greeting = 'Ho ho'
+   console.log(greeting);    //greeting = 'Ho ho'
 
    let year = 'leap';
    if (year === 'leap') greeting = 'Hey 366 days';
@@ -138,11 +135,14 @@
 * เหมือน ```let``` แต่ re-declared and updated **ไม่ได้!**
 * ถ้าประกาศตัวแปรด้วย ```const``` แล้วจะไม่สามารถแก้ไขค่าของตัวแปรนั้นได้อีก
 ```JavaScript
-        /*const variables*/
-        const greeting = 'Hey';
-        //const variables cannot be re-declared
-        // const greeting = 'Ho Ho';
-        //const variables cannot be updated
-        // greeting = 'Hi Hi';
+      //ถ้าตัวแปรเป็น primitive จะเป็น final เปลี่ยนค่าไม่ได้ 
+      const value = 3;
+      //const value = 4;    //re-declared ไม่ได้
+      //value = 4;          //updated     ไม่ได้ 
+
+      //แต่ถ้าเป็น object สามารถคค่า propertyแก้ไขได้
+      const student={id:1,name:"Somchai"}  
+      student.email="somchai@mail.com"    
+      student     //{ id: 1, name: 'Somchai', email: 'somchai@mail.com' }
 ```
 
