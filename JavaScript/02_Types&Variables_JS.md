@@ -34,6 +34,20 @@
         type of mySymbol is symbol
         type of myNull is object
         
+   #### ตารางสรุป typeof
+   | Type             | Result         |
+   |:---------------- |:-------------- |
+   | Number           |   `number`     |
+   | Boolean          |   `boolean`    |
+   | String           |   `string`     |
+   | Boolean          |   `boolean`    |
+   | Undefined        |   `undefined`  |
+   | Symbol           |   `symbol`     |
+   | Any other object |   `object`     |
+   | Function         |   `function`   |
+   | Bigint           |   `bigint`     | 
+   
+        
 ### 2. object types  _เป็น Object ซ้อน Object ก็ได้_
    * An object (that is, a member of the type object) is a collection of properties where each property has a name and a value (either a primitive value or another object)
    * a special kind of object, known as an array, that represents an ordered collection of numbered values
@@ -66,7 +80,7 @@
         console.log(`b == c is ${b == c}`);
   ```
    > Output
-  
+  ```
         {"id":1,"task":"grading exam"}
         type of myObj is object
         {"id":1,"task":"grading exam"}
@@ -78,6 +92,8 @@
         type of myArr is object
         a === b is true
         b == c is false
+  ```
+
 
 ## Values
 ### Primitive value
