@@ -47,7 +47,7 @@ const quest6 = {
         return this.question.length; 
     }
 }
-// implicit class 
+//implicit class 
 let quest = {}; // => let quest = new Object();
 console.log(typeof quest); //object
 
