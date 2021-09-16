@@ -150,6 +150,19 @@
     false +1    //1     (false มีค่าเป็น 0)
     null * 1    //0     (null มีค่าเป็น 0)
 ```
-| Value   | to String    | to Number | to Boolean |
-|---------|--------------|-----------|------------|
-|uuderfined|underfined|NaN|false|
+| Value     | to String    | to Number | to Boolean   |
+|:----------|:------------:|:---------:|:-----------: |
+|uuderfined |`"underfined"`|`NaN`      |`false`       |
+|null       |`"null"`      |`0`        |`false`       |
+|true       |`"true"`      |`1`        |              |   
+|false      |`"false"`     |`0`        |              | 
+|""         |              |`0`        |`false`       |
+|"1.2"      |              |`1.2`      |`true`        |   
+|"one"      |              |`NaN`      |`true`        | 
+|0          |`"0"`         |           |`false`       |
+|-0         |`"0"`         |           |`false`       |
+|1          |`"1"`         |           |`true`        |
+|Infinity   |`"Infinity"`  |           |`true`        |
+|-Infinity  |`"-Infinity"` |           |`true`        |
+|NaN        |`"NaN"`       |           |`false`       |
+|[ ]        |`""`          |`0`        |`true`        |
