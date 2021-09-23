@@ -60,7 +60,7 @@ console.log(arr[5].name);   //เรียก property 'name' ที่อยู
 arr[4][0]='X';          // insert ค่า X แทน A ใน array ที่ซ้อนอยู่ใน array
 console.log(arr[4]);    // [ 'X', 'B', 'C' ]
 
-//การใช่้ ... (การ copy )
+//การใช่้ ... (การ copy)
 let arr0 = ['confirm',...arr]; //เอา array มาต่อกัน
 console.log(arr0);             //['confirm',10, true,1, 'unknown', ['A','B','C'], {id:1, name:'Adam'}]
 
@@ -75,7 +75,7 @@ arrPer1[0].name ='Joe';
 console.log(per1);          //[ { id: 1, name: 'Joe' } ]
 
 let num1 = [10];
-let arrNum1 = [...num1];//copy array
+let arrNum1 = [...num1];//copy array  ((1.spread operator))
 arrNum1[0] = 20 ;
 console.log(num1);      //[10]
 console.log(arrNum1);   //[20]
