@@ -6,6 +6,7 @@
    * สร้าง object ใน array
    * การสร้าง Funciton ใน object
 * การแทรก Properties ใน object
-* การเปรียบเทียบ object ==,===
+* การเปรียบเทียบ object ==,=== ใช้ได้เหมือนกัน
+เพราะจะเทียบกันที่ address object
 
 

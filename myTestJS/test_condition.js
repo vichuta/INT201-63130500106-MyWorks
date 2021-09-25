@@ -1,3 +1,8 @@
+//rounding error, it affects any programming language that uses binary floating-point numbers.
+
+
+
+
 //if condition
 let a = 0;
 let b = 1;
@@ -20,3 +25,23 @@ function check(x) {
         console.log(x +' this number more than 10');
     }
 }
+
+
+//if-else
+//switch...case
+//while
+let count = 0
+while(count < 5) {
+    console.log(count);
+count++;
+}
+//do...while
+let count = 0
+do{
+    console.log(count+=count); 
+    count++;
+}
+while(count < 5);
+//for
+//for-in
+//for-of
