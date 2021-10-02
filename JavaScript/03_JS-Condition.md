@@ -128,7 +128,7 @@ true === Boolean("true") // true: เพราะนับว่าเป็น 
     for(let element of data) {
         sum += element;
     };
-    console.log(`sum = ${sum}`);    //60
+    console.log(`sum = ${sum}`);    //sum = 60
 ```
 * **for-in** ใช้เข้าถึง property แต่ละตัวใน object
 ```JavaScript
