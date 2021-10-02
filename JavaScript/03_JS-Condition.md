@@ -14,7 +14,7 @@
     false +1    //1     (false มีค่าเป็น 0)
     null * 1    //0     (null มีค่าเป็น 0)
 ```
-## ตาราง Converson
+## ตาราง Conversion
 | Value     | to String    | to Number | to Boolean   |
 |:----------|:------------:|:---------:|:-----------: |
 |uuderfined |`"underfined"`|`NaN`      |`false`       |
@@ -34,24 +34,24 @@
 -----
 ## JavaScript Operators 
 ### การดำเนินการของ JS จะทำตามลำดับต่อไปนี้
-#### 1. Increment `++` and Decrement `--`
-#### 2. Invert Boolean value `!`
-#### 3. Type of operand `typeOf`
-#### 4. Arithmetic operators `*`, `/`, `%`, `+`, `-`
+1. Increment `++` and Decrement `--`
+2. Invert Boolean value `!`
+3. Type of operand `typeOf`
+4. Arithmetic operators `*`, `/`, `%`, `+`, `-`
 ```JavaScript
     console.log(10+20/5-4*2%4);   //14
     //10+(20/5)-(4*2%4)  =>  10+4-(8%4)  =>  14+0           
 ```
-#### 5. Relational operators `<`, `>`, `<=`, `>=`
-#### 6. Equality operators - การเปรียบเทียบ (เฉพาะ Primitie Type)
-##### 6.1 non starict equality `==`, `!=` (ไม่เช็ค Conversion)
+5. Relational operators `<`, `>`, `<=`, `>=`
+6. Equality operators - การเปรียบเทียบ (เฉพาะ Primitie Type)
+ * 6.1 non starict equality `==`, `!=` (ไม่เช็ค Conversion)
 ```JavaScript
 null == undefined   //**true**
  "0" == 0           // true: "0" --> 0          (String -> Number)
    0 == false       // true: false --> 0        (Boolean -> Number)
  "1" == true        // true: "1" --> 1 --> true (String -> Number -> Boolean)
 ```
-##### 6.2 starict equality `===`, `!==` (เช็ค Implicit Conversion = ถ้าจะเป็น `false`)
+ * 6.2 starict equality `===`, `!==` (เช็ค Implicit Conversion = ถ้ามีจะเป็น `false`)
 ```JavaScript
 //เป็น false ทั้งหมด เพราะมีการ Conversion แบบ Implicit
 null === undefined   // false
@@ -61,18 +61,18 @@ null === undefined   // false
 
 true === Boolean("true") // true: เพราะนับว่าเป็น Implicit Conversion
 ```
-#### 7. Logical operators `&&`, `||`
+7. Logical operators `&&`, `||`
 ```JavaScript
     console.log(true&&false);   //false
     console.log(true||false);   //true                 
 ```
-#### 8. Conditional operators `?:`
+8. Conditional operators `?:`
 ```JavaScript
     let count = 5;
     let result = count > 5 ? 'True' : 'False';      
     console.log(result);                        //False
 ```
-#### 9. Assignment operators `+=`, `-=`, `*=`, `/=`, `%=`
+9. Assignment operators `+=`, `-=`, `*=`, `/=`, `%=`
 
 ----
 ## if-else
@@ -103,7 +103,7 @@ true === Boolean("true") // true: เพราะนับว่าเป็น 
     let count = 0;
     while(count < 5) {
         console.log(count); // print เลข 0-4
-    count++;
+        count++;
     }
 ```
 ## do...while
