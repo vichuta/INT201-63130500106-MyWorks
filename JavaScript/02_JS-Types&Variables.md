@@ -134,7 +134,7 @@
       //const value = 4;    //re-declared ไม่ได้
       //value = 4;          //updated     ไม่ได้ 
 
-      //แต่ถ้าเป็น object สามารถคค่า property แก้ไขได้
+      //แต่ถ้าเป็น object สามารถล็อคค่า property ไม่ได้
       const student= { id:1, name:"Somchai" }  
       student.email = "somchai@mail.com"    
       student     //{ id: 1, name: 'Somchai', email: 'somchai@mail.com' }
