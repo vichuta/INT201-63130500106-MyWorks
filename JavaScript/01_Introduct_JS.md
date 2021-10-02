@@ -1,4 +1,8 @@
 # Introduction to JavaScript
+1. การเขียน statement
+2. Synchronous vs Asynchronous
+3. Higher-Order Functions
+----
 ### JavaScript Language Features
   * เป็น Dynamically language สามารถเปลี่ยนแปลงค่าของตัวแปร และ type ของตัวแปรได้อิสระ
   * Support Object Oriented Programming (Prototyped-based) - สนับสนุนการเขียนแบบ OOP

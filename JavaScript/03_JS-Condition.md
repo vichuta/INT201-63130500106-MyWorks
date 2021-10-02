@@ -1,4 +1,9 @@
 # JavaScript Control Structures
+1. Conversions
+2. JavaScript Operators 
+3. Conditionals (`if-else`, `switch-case`)
+4. Loop (`while`, `do-while`, `for`, `for-of`, `for-in`)
+---
 ## Type Conversions
 ### 1. Explicit Conversions = แปลง type ด้วย function
 ```JavaScript
@@ -76,7 +81,8 @@ true === Boolean("true") // true: เพราะนับว่าเป็น 
 9. Assignment operators `+=`, `-=`, `*=`, `/=`, `%=`
 
 ----
-## if-else
+## Conditionals
+* `if-else`
 ```JavaScript
     let x = 6;
     if(x == 5){
@@ -87,7 +93,7 @@ true === Boolean("true") // true: เพราะนับว่าเป็น 
         console.log(`${x} คืออะไรไม่รู้ `);
     }
 ```
-## switch...case
+* switch...case
 ```JavaScript
     let n = 22 % 3; //22%3 => 1
     switch(n){
@@ -99,7 +105,8 @@ true === Boolean("true") // true: เพราะนับว่าเป็น 
         break;
     }
 ```
-## while
+## Loop
+* `while` while loop >> มักใช้กับการวน loop ที่จำนวนรอบไม่แน่นอน
 ```JavaScript
     let count = 0;
     while(count < 5) {
@@ -107,7 +114,7 @@ true === Boolean("true") // true: เพราะนับว่าเป็น 
         count++;
     }
 ```
-## do...while
+* `do...while` do-while loop >> มักใช้กับการวน loop ที่ไม่ทราบจำนวนรอบที่แน่นอน
 ```JavaScript
     let count = 0;
     do{
@@ -116,25 +123,25 @@ true === Boolean("true") // true: เพราะนับว่าเป็น 
     }
     while(count < 5);
 ```
-## for
+* `for` for loop >> มักใช้กับการวน loop ที่รู้จำนวนรอบที่แน่นอน
 ```JavaScript
     let data = ['A','B','C'];
     for(let i = 0, len = data.length; i < len; i++)
     console.log(data[i]); //print > A B C
 ```
-* **for-of** (เหมือน iterable) ใช้เข้าถึง element แต่ละตัวใน collection เช่น array, string, set, map
-```JavaScript
-    let data = [10,20,30];
-    let sum = 0;
-    for(let element of data) {
-        sum += element;
-    };
-    console.log(`sum = ${sum}`);    //sum = 60
-```
-* **for-in** ใช้เข้าถึง property แต่ละตัวใน object
-```JavaScript
-    for(let property in object) {
-    console.log(property);          //print property name
-    console.log(object[property]);  //print value of each property
-    }
-```
+   * `for-of` (เหมือน iterable) ใช้เข้าถึง element แต่ละตัวใน collection เช่น array, string, set, map
+    ```JavaScript
+        let data = [10,20,30];
+        let sum = 0;
+        for(let element of data) {
+            sum += element;
+        };
+        console.log(`sum = ${sum}`);    //sum = 60
+    ```
+    * `for-in` ใช้เข้าถึง property แต่ละตัวใน object
+    ```JavaScript
+        for(let property in object) {
+        console.log(property);          //print property name
+        console.log(object[property]);  //print value of each property
+        }
+    ```

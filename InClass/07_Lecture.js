@@ -94,3 +94,59 @@ const myFunc3 = function(id='unknown',name=0){
 myFunc3(5)              //5, 0
 myFunc3('unknown',5);   //unknown 5
 myFunc3(undefined, 5);  //unknown 5
+
+
+
+
+
+
+//การสร้าง Class
+class Rectangle{
+    //constructor(param) 
+       constructor(width, height) {     //ใช้กำหนดค่า attribute ของ Class
+          this._width = width;
+          this._height = height;
+       }
+    //ares() = function ที่ไว้คำนวณ
+       area() {
+          return this._width * this._height;
+       }
+
+    //getting, setting, toString method()
+       get width() {
+          return this._width;  
+       }
+       set width(newWidth) {
+          this._width = newWidth;
+       }
+       get height() {
+          return this._height;
+       }
+       set height(newHeight) {
+          this._height = newHeight;
+       }
+       toString() {
+          return ('width = ' + this._width +', height = ' + this._height +
+       ', area = ' + this.area());
+       }
+ }
+//การเรียกใช้ Class
+ let rec1 = new Rectangle(3, 4);
+ console.log(rec1.width);      //3
+ console.log(rec1.height);     //4
+ console.log(rec1.area());     //12
+ console.log(rec1.toString()); //width = 3, height = 4, area = 12
+
+//ลอง extends Class ด้วย Object.create() => square extends rec1
+ let rec2 = Object.create(rec1);
+    CanvasRenderingContext2D.perimeter = function () {    //เพิ่ม perimeter() เพื่อหาเส้นรอบรูป
+       return (2*this.width)+(2*this.height);
+    };
+    console.log(rec2.width);    //2
+    console.log(rec2.height);   //3
+    console.log(rec2.area())    //12
+    console.log(rec2.perimeter()); //14
+
+
+
+    

@@ -1,4 +1,9 @@
-# Types, Values, and Variables + Type Conversions
+# Types, Values, and Variables
+1. Type
+2. Values
+3. Variables
+4. JavaScript String Function
+----
    ## Types
    แบ่งออกเป็น 2 ประเภท
    ### 1. primitive types
@@ -136,7 +141,7 @@
 ```
 -----
 
-# JavaScript String
+# JavaScript String Function
   รวม function ของ String : <https://www.w3schools.com/jsref/jsref_obj_string.asp>
   > ตัวอย่าง JavaScript String
 ```JavaScript
@@ -162,4 +167,5 @@
     console.log(`Hello ${true && false}`)    //Hello false
     console.log(`Hello ${msg.charAt(1)}`)    //Hello s
 ```
-* **Immutable คือ การ return ค่าของตัวแปรตาม function เป็น String ตัวใหม่ แต่ไม่ได้เปลี่ยนเปลี่ยนค่าในตัวแปรนั้น**
+* **Immutable** คือ การ return ค่าของตัวแปรตาม function เป็น String ตัวใหม่ แต่ไม่ได้เปลี่ยนเปลี่ยนค่าในตัวแปรนั้น
+
