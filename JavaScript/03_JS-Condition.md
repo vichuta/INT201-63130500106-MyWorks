@@ -39,8 +39,9 @@
 3. Type of operand `typeOf`
 4. Arithmetic operators `*`, `/`, `%`, `+`, `-`
 ```JavaScript
+    console.log(10**2);           //10^2   
     console.log(10+20/5-4*2%4);   //14
-    //10+(20/5)-(4*2%4)  =>  10+4-(8%4)  =>  14+0           
+    //10+(20/5)-(4*2%4)  =>  10+4-(8%4)  =>  14+0        
 ```
 5. Relational operators `<`, `>`, `<=`, `>=`
 6. Equality operators - การเปรียบเทียบ (เฉพาะ Primitie Type)

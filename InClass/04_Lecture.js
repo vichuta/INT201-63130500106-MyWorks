@@ -42,11 +42,12 @@ book.version = [1.0,1.5,2.0];
 //การเพิ่ม attribute ใน object ทำได้ 2 แบบ
 book.year = 2002;
 book["page"]=200;
+
 //การเรียก attribute ใน object ทำได้ 2 แบบ
 book.year;
 book["page"];//---> ใส่ string expression ได้
 
-function distance(p1, p2) {
+function distance(p1, p2) { //p1,p2 = formal parameter
     console.log(typeof p1); //object
     console.log(typeof p2); //object
     // ** ‐ The exponentiation assignment operator
@@ -64,3 +65,21 @@ let person = new Object();  //เหมือน let person={}
 let a = new Array();        //เหมือน let a = []
 let p = new Point();
 
+let obj1 = { 
+    id : 1, 
+    name : 'Ana',
+    "Gender" : 'F'   
+ };
+ 
+
+//Getting การเรียกใช้ (มี 2 แบบ)
+ console.log(obj1);          //1
+ console.log(obj1["name"]); 
+ console.log(obj1.Gender);
+ console.log(obj1["Gender"]);  
+
+let obj3 = {
+    id : 3,
+    name : ['Alice','Bob','Charlie']
+ };
+ console.log(obj3.name[0].length);

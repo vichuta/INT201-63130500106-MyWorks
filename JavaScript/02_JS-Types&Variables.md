@@ -129,9 +129,9 @@
       //const value = 4;    //re-declared ไม่ได้
       //value = 4;          //updated     ไม่ได้ 
 
-      //แต่ถ้าเป็น object สามารถคค่า propertyแก้ไขได้
-      const student={id:1,name:"Somchai"}  
-      student.email="somchai@mail.com"    
+      //แต่ถ้าเป็น object สามารถคค่า property แก้ไขได้
+      const student= { id:1, name:"Somchai" }  
+      student.email = "somchai@mail.com"    
       student     //{ id: 1, name: 'Somchai', email: 'somchai@mail.com' }
 ```
 -----
@@ -146,18 +146,20 @@
     msg.charAt();               //charAt() = ดูตัวอักษรตัวแรก คือ 'J' 
     msg.charAt(msg.length);     //charAt(msg.length) = charAt(2) คือ '' (ไม่มี)
     msg.charAt(msg.length-1);   //charAt(msg.length-1) = charAt(1) คือ  'S'
-    msg.toLocaleLowerCase();    //toLocaleLowerCase() = ปรับให้เป็นตัวเล็ก 'js' String --> immutable
-    //Immutable คือ ไม่ได้เปลี่ยนเปลี่ยนค่า msg แต่ return ตามค่า function LowerCase เป็น String ตัวใหม่
-    msg                         //'JS' 
-    msg.substring(0,2);         //เริ่มที่ 0 จบที่ 2 = 'S'
+    msg.toLocaleLowerCase();    //toLocaleLowerCase() = ปรับให้เป็นตัวเล็ก 'js' String => Immutable
+    
+    msg                             //'JS' 
+    msg.substring(0,2);             //เริ่มที่ 0 จบที่ 2 = 'S'
     msg=msg.toLocaleLowerCase();    //'js'
     console.log("Hello" + msg)      //Hellojs
     console.log(`Hello everyone, 'section' ${msg}`) // ใช้ ` ` ช่วยประหยัดการใช้ + ต่อคำ
     console.log(`Hello          
-    World`)                     //Hello
-                                //World (ขึ้นบรรทัดใหม่ได้)
-    console.log(`Hello ${msg+1}`)   //Hello js1
-    console.log(`Hello ${1000}`)    //Hello 1000
-    console.log(`Hello ${true && false}`)   //Hello false
-    console.log(`Hello ${msg.charAt(1)}`)   //Hello s
+    World`)                         //Hello
+                                    //World ((ขึ้นบรรทัดใหม่ได้))
+
+    console.log(`Hello ${msg+1}`)            //Hello js1
+    console.log(`Hello ${1000}`)             //Hello 1000
+    console.log(`Hello ${true && false}`)    //Hello false
+    console.log(`Hello ${msg.charAt(1)}`)    //Hello s
 ```
+* **Immutable คือ การ return ค่าของตัวแปรตาม function เป็น String ตัวใหม่ แต่ไม่ได้เปลี่ยนเปลี่ยนค่าในตัวแปรนั้น**
