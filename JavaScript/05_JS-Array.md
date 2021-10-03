@@ -145,6 +145,8 @@
 ## Array Methods 
 * Array Iterator Methods
     * `forEach()`
+    ```JavaScript
+    ```
     * `map()` 
     * `filter()` = return เป็น subset ของ array
     * `find()` = return element ทั้งหมดที่ตรงกับเงื่อนไข
@@ -153,7 +155,20 @@
     * `reduce()`
 * Stack and queue methods
     * `push()` = เพิ่ม element ต่อท้าย array
-    * `pull()` = ลบ element ตัวสุดท้ายของ array
+    ```JavaScript
+        let fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.push("Kiwi");    // Adds "Kiwi" to fruits
+        console.log(fruits);
+        console.log(fruits.length);
+    ```
+    * `pop()` = ลบ element ตัวสุดท้ายของ array
+    ```JavaScript
+        let fruits = ["Banana", "Orange", "Apple", "Mango"];
+        console.log(fruits);    //[ 'Banana', 'Orange', 'Apple', 'Mango' ]
+        let x = fruits.pop();   // Removes "Mango" from fruits
+        console.log(fruits);    //[ 'Banana', 'Orange', 'Apple' ]
+        console.log(x);         //Mango
+    ```
     * `unshift()` = เพิ่ม element ในตำแหน่งแรกของ array
     * `shift()` = ลบ element ตัวแรกของ array
 * Subarray methods 
@@ -167,3 +182,7 @@
     * `reverse()` = เรียง element ของ array กลับหลัง (จากหลังมาหน้า)
 * Array to String Conversions
     * `join()` = แปลง element -> String เช่น `['H','i']`--> `'Hi'`
+    ```JavaScript
+        let fruits = ["Banana", "Apple", "Mango", "Orange"]
+        console.log(fruits.join(', '));   //Banana, Apple, Mango, Orange
+    ```
