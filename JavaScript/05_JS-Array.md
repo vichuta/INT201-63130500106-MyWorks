@@ -145,8 +145,6 @@
 ## Array Methods 
 * Array Iterator Methods
     * `forEach()`
-    ```JavaScript
-    ```
     * `map()` 
     * `filter()` = return เป็น subset ของ array
     * `find()` = return element ทั้งหมดที่ตรงกับเงื่อนไข
