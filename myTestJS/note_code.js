@@ -1,63 +1,68 @@
-//การสร้าง Class
-class Rectangle{
-   //constructor(param) 
-      constructor(width, height) {     //ใช้กำหนดค่า attribute ของ Class
-         this._width = width;
-         this._height = height;
-      }
-   //ares() = function ที่ไว้คำนวณ
-      area() {
-         return this._width * this._height;
-      }
+//Primitive Type in array
+let arrayType = [10,'Name',true];
+//Getting
+    arrayType[0];   //10
+    arrayType[1];   //'Name'
+    arrayType[2];   //true
+//Setting (แก้ไขค่าได้อิสระ)
+    arrayType[0] = 20;      //arrayType = [20,'Name',true]
+    arrayType[2] = false;   //arrayType = [20,'Name',false]
+//Add element in array
+    arrayType[3] = 'add';   //arrayType = [20,'Name',false,'add'];
+    arrayType[5] = 10;      //arrayType = [20,'Name',false,'add',<1 empty item>, 10 ];
+    delete arrayType[2];
 
-   //getting, setting, toString method()
-      get width() {
-         return this._width;  
-      }
-      set width(newWidth) {
-         this._width = newWidth;
-      }
-      get height() {
-         return this._height;
-      }
-      set height(newHeight) {
-         this._height = newHeight;
-      }
-      toString() {
-         return ('width = ' + this._width +', height = ' + this._height +
-      ', area = ' + this.area());
-      }
-}
-//การเรียกใช้ Class
-let rec1 = new Rectangle(3, 4);
-console.log(rec1.width);      //3
-console.log(rec1.height);     //4
-console.log(rec1.area());     //12
-console.log(rec1.toString()); //width = 3, height = 4, area = 12
-
-let square = Object.create(rec1);      //=> square extends rec1
-      square.perimeter = function () {    //เพิ่ม perimeter() เพื่อหาเส้นรอบรูป
-         return (2*this.width)+(2*this.height);
-      };
-Rectangle.prototype.half = function(){
-   return (this.area()/2);
-};
-
-//การเรียกใช้
-   console.log(square.width);       //3
-   console.log(square.height);      //4
-   console.log(square.area());      //12
-   console.log(square.perimeter()); //14
-   console.log(square.toString());  //width = 3, height = 4, area = 12
-   console.log(square.half());      //6
-
-//เช็คความสัมพันธ์ของ object class
-   console.log(Object.prototype.isPrototypeOf(rec1));       //true (Object <--rec1)
-   console.log(Object.prototype.isPrototypeOf(square));     //true (Object <--Rectangle/rec1 <--square)
-   console.log(square instanceof Object);                   //true
+//Object in array
+    let arrayB = [
+      { id: 1, name: 'Ann'},
+      { id: 2, name: 'Peter'},
+      { id: 3, name: 'Mary'}
+];
+//delete
    
-   console.log(Rectangle.prototype.isPrototypeOf(square));  //true (Rectangle/rec1 <--square)
-   console.log(square instanceof Rectangle);                //true 
-   
-   console.log(Object.getOwnPropertyNames(square));         //[ 'perimeter' ]
 
+let arr1 = [1,2,3];
+    let arr2 = [arr1,4,5]; //arr2 => [ [ 1, 2, 3 ], 4, 5 ] *แบบนี้คือการเอา array มาเก็บไว้ใน array (array ซ้อน array)
+    arr2 = [...arr1,4,5];   //arr2 => [1,2,3,4,5] **เอา array มาต่อกันใน array เดียว**
+    
+//ลองแก้ไขค่าข้างใน arr2
+    arr2[0] = 0;
+    console.log(arr2)   //[ 0, 2, 3, 4, 5 ]
+    console.log(arr1)   //[ 1, 2, 3 ]       (arr1 ไม่เปลี่ยนตาม)
+    arr1[0] = 6;
+    console.log(arr2)   
+    console.log(arr1)  
+
+const products1 = [ {id: 1, price: 10},{id: 2, price: 5}]; //Object of Array
+let newProduct = {id: 3, price: 20};  //Object
+console.log(products1);
+console.log(newProduct);
+console.log(`-------รวม array object--------`);
+let allProducts = [...products1,{...newProduct}]; 
+console.log(products1);
+console.log(newProduct);
+console.log(allProducts);
+console.log(`-------แก้ไขค่า newProduct---------`);
+newProduct.price=100;
+console.log(products1);   
+console.log(newProduct);
+console.log(allProducts);//id 3 ไม่เปลี่ยนตาม
+console.log(`-------เพิ่มค่า product1---------`);
+products1[2]= {id: 4, price:20};
+console.log(products1);   
+console.log(newProduct);
+console.log(allProducts);//ไม่ขึ้น id 4
+console.log(`-------แกไขค่า allproduct---------`);
+allProducts[0].id=0;
+console.log(products1);   
+console.log(newProduct);
+console.log(allProducts);
+
+
+let a = ["hello"]; 
+let value = a[0]; // Read element 0
+a[1] = 3.5; // Write element 1
+let i = 2;
+a[i] = 3; // Write element 2
+a[i + 1] = "world"; // Write element 3
+a[a[i]] = a[0];

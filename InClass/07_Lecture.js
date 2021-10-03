@@ -11,7 +11,7 @@ console.log(products);
 newProduct.price=100;                       //**มันแก้ไขค่า object ข้างในได้!!!
 console.log(products);
 
-        products = [{id: 1, price: 10},{id: 2, price: 5}];
+    products = [{id: 1, price: 10},{id: 2, price: 5}];
     newProduct.price=20;
     console.log("วิธีแก้");
     
@@ -44,7 +44,7 @@ const myFunc = function (instructor,ta, ...students){
     return students;
 };
 console.log(myFunc('Your Name','Last Name', 'A','B','C')); //เรียกผ่านตัวแปรได้เลย
-myFunc //การใใส่ชื่อ function
+myFunc //การใส่ชื่อ function
 myFunc() //การ excute function
 
 //ตัวอย่าง function

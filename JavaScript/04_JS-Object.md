@@ -1,8 +1,8 @@
 # Object
-* Creating/ Getting/ Setting/ Object
-* Object Comparing
-* Class and constructor functions
-* Prototype Chaining (Inheritance Object)
+1. Creating/ Getting/ Setting/ Object
+2. Object Comparing
+3. Prototype Chaining (Inheritance Object)
+4. Class and constructor functions
 ----
 ## Creating/ Getting/ Setting/ Object
 0. Object by `new`
@@ -67,7 +67,7 @@
 ```
 
 ## Object Comparing
-* การเปรียบเทียบ object จะเช็คจาก **address ของ object** ถ้าชี้ไป address เดียวกัน = `true`
+* การเปรียบเทียบ object จะเช็คจาก **memory address ของ object** ถ้าชี้ไป address เดียวกัน = `true`
 * `==`,`===`,`Object.is(obj1,obj2)` ใช้เปรียบเทียบ object ได้เหมือนกัน
 ```JavaScript
    let box1 = {id: 1, color: 'red'};
@@ -145,6 +145,7 @@
          constructor(width, height) {     //ใช้กำหนดค่า attribute ของ Class
             this._width = width;
             this._height = height;
+            //this.width ***ไม่ควรใช้ เพราะมันคือการเรียกใช้ getter***
          }
       //ares() = function ที่ไว้คำนวณ
          area() {
@@ -203,3 +204,4 @@
    console.log(Rectangle.prototype.isPrototypeOf(square));  //true (Rectangle/rec1 <--square)
    console.log(square instanceof Rectangle);                //true 
 ```
+* Object static method : <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#static_methods> 
