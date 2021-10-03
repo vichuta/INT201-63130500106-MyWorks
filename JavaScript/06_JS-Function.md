@@ -1,5 +1,7 @@
-
-
+# Function
+1. Parameter of Function 
+2. Function Expressions
+3. Arrow Function Expressions
 ```Javascript
 function distance(p1, p2) {
     console.log(typeof p1); //object

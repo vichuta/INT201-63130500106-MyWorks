@@ -1,11 +1,10 @@
 # JavaScript Array
-* Creating Array ในรูปแบบต่างๆ
-1. Array literals 
-2. The ... spread operator on an iterable object
-3. The Array() constructor
-4. The Array.of() and Array.from() factory methods
-* destructuring assignment
-* Array Method
+1. The Array() constructor
+2. ประเภทของ Array
+3. Spread operator
+4. Destructuring assignment
+5. Iterating Arrays
+6. Array Methods 
 ---
 ## Array
 * ใช้เก็บของเป็น **collection** 

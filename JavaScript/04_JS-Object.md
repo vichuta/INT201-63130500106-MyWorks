@@ -3,6 +3,7 @@
 2. Object Comparing
 3. Prototype Chaining (Inheritance Object)
 4. Class and constructor functions
+5. Object static method
 ----
 ## Creating/ Getting/ Setting/ Object
 0. Object by `new`
@@ -137,7 +138,7 @@
 ```
 
 ## Class and constructor functions
-* การสร้าง Class ใน JS (method = function)
+1. การสร้าง Class ใน JS (method = function)
 ```JavaScript
 //การสร้าง Class
    class Rectangle{
@@ -204,4 +205,19 @@
    console.log(Rectangle.prototype.isPrototypeOf(square));  //true (Rectangle/rec1 <--square)
    console.log(square instanceof Rectangle);                //true 
 ```
-* Object static method : <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#static_methods> 
+2. Function constructor = constructor ที่ไม่มีชื่อ Class
+```JavaScript
+   function Person(name, age, job) {
+      this.name = name;
+      this.age = age;
+      this.job = job;
+      this.sayName = function () {console.log(this.name);};
+   }
+   let person1 = new Person('Pot', 40, 'Tester');
+   let person2 = new Person('Joe', 20, 'Doctor');
+   person1.sayName(); //Pot
+   person2.sayName(); //Joe
+```
+
+## Object static method 
+* รวม function ของ `Object` <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#static_methods> 
