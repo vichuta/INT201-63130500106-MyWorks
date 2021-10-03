@@ -82,7 +82,7 @@
 
 * ถ้าต้องการเปรียบเทียบ property ใน object ต้องสร้าง function **Shallow Equality** ไว้ใช้เปรียบเทียบ `{name : value}` ใน object 
 ```JavaScript
-//Shallow Equality = เปรียบแค่ property_name * แต่ไม่ได้เปรียบเทียบ address object
+//Shallow Equality = เปรียบเทียบแค่ property_name * แต่ไม่ได้เปรียบเทียบ address object
    function boxEqual(obj1,obj2){
       const keys1 = Object.keys(obj1);    //Object.keys() >> return เป็น String key ของ property  
       const keys2 = Object.keys(obj2);    //Object.keys(box2) => id,color

@@ -129,7 +129,7 @@ true === Boolean("true") // true: เพราะนับว่าเป็น 
     for(let i = 0, len = data.length; i < len; i++)
     console.log(data[i]); //print > A B C
 ```
-   * `for-of` (เหมือน iterable) ใช้เข้าถึง element แต่ละตัวใน collection เช่น array, string, set, map
+  * `for-of` (เหมือน iterable) ใช้เข้าถึง element แต่ละตัวใน collection เช่น array, string, set, map
     ```JavaScript
         let data = [10,20,30];
         let sum = 0;
@@ -138,7 +138,7 @@ true === Boolean("true") // true: เพราะนับว่าเป็น 
         };
         console.log(`sum = ${sum}`);    //sum = 60
     ```
-    * `for-in` ใช้เข้าถึง property แต่ละตัวใน object
+  * `for-in` ใช้เข้าถึง property แต่ละตัวใน object
     ```JavaScript
         for(let property in object) {
         console.log(property);          //print property name
