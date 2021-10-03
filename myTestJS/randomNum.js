@@ -38,3 +38,55 @@ function getRandomNumber(){
   }
   
   main()
+
+
+  let players = [
+    {
+      name: 'Jom',
+      scores: [],
+      results: [],
+    },
+    {
+      name: 'Toey',
+      scores: [],
+      results: [],
+    },
+  ] // กำหนด Object
+  
+  const randomDiceScore = () => Math.floor(Math.random() * 6) + 1
+  
+  function play(all_game = 1, all_round = 3) {
+    for (let game = 0; game < all_game; game++) {
+      for (let round = 0; round < all_round; round++) {
+        let diceP1 = 0,
+          diceP2 = 0
+        for (const [index, player] of players.entries()) {
+          let diceScore = randomDiceScore()
+          index === 0 ? (diceP1 = diceScore) : (diceP2 = diceScore)
+          player.scores.push(diceScore)
+        }
+        if (diceP1 > diceP2) {
+          players[0].results.push('Win')
+          players[1].results.push('Lose')
+        } else if (diceP1 === diceP2) {
+          players[0].results.push('Draw')
+          players[1].results.push('Draw')
+        } else {
+          players[0].results.push('Lose')
+          players[1].results.push('Win')
+        }
+      }
+    }
+  }
+  
+  play()
+  
+  let total_score_p1 = players[0].scores.reduce((prev, curv) => curv + prev, 0)
+  let total_score_p2 = players[1].scores.reduce((prev, curv) => curv + prev, 0)
+  console.log(players)
+  let win_message =
+    total_score_p1 > total_score_p2
+      ? console.log(`${players[0].name} Win`)
+      : total_score_p1 < total_score_p2
+      ? console.log(`${players[1].name} Win`)
+      : console.log('Draw')

@@ -93,7 +93,7 @@ true === Boolean("true") // true: เพราะนับว่าเป็น 
         console.log(`${x} คืออะไรไม่รู้ `);
     }
 ```
-* switch...case
+* `switch...case`
 ```JavaScript
     let n = 22 % 3; //22%3 => 1
     switch(n){

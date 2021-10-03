@@ -79,7 +79,7 @@ myFunc() //การ excute function
     const getClass = ()=>`INT201`;
 
 //Arguments in function 
-function printStudents() {                  //function ไม่ได้รับค่า parameter
+function printStudents(n) {                  //function ไม่ได้รับค่า parameter
     console.log(arguments.length);  //4
     console.log(arguments[1]);      //Adam
     console.log(arguments[2]);      //john
