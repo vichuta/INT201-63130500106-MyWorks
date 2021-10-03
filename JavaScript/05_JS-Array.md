@@ -89,7 +89,7 @@
     newProduct.price = 100;
     products //[ { id: 1, price: 10 }, { id: 2, price: 5 }, { id: 3, price: 100 } ]
 ```
-   > วิธีปกป้องการ update ค่าของ Object of Array เมื่อมีการแก้ไขค่า Object
+   > วิธีปกป้องการ update ค่าของ Object of Array เมื่อมีการแก้ไขค่าผ่าน Object
 ```JavaScript
 //วิธีแก้ที่ 1 : เพิ่ม {} ครอบ ...Object
     products = [...products,{...newProduct}]; 
