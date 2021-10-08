@@ -168,10 +168,43 @@
         console.log(x);         //Mango
     ```
     * `unshift()` = เพิ่ม element ในตำแหน่งแรกของ array
+    ```JavaScript
+        fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.unshift("Lemon"); 
+        console.log(fruits);    //[ 'Lemon', 'Banana', 'Orange', 'Apple', 'Mango' ]
+    ```
     * `shift()` = ลบ element ตัวแรกของ array
+    ```JavaScript
+        fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.shift();         // Removes "Banana" from fruits
+    ```
 * Subarray methods 
-    * `slice()` 
-    * `splice()` 
+    * `slice()` = ใช้เลือก subarray ใน array
+    ```JavaScript
+        const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+        const subarr1 = fruits.slice(1);    //เอา1ตัวแรก ออก
+        const subarr2 = fruits.slice(3);    //เอา3ตัวแรก ออก
+        const subarr3 = fruits.slice(1,3);  //เอาตัวที่ 2,3        **ไม่นับตัวเริ่มต้น
+        
+        console.log(fruits);    //[ 'Banana', 'Orange', 'Lemon', 'Apple', 'Mango' ]
+        console.log(subarr1);   //[ 'Orange', 'Lemon', 'Apple', 'Mango' ]
+        console.log(subarr2);   //[ 'Apple', 'Mango' ]
+        console.log(subarr3);   //[ 'Orange', 'Lemon' ]
+    ```
+    * `splice()` = ใช้ insert, delete element ใน array
+    ```JavaScript
+    //Insert
+        let fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.splice(2, 0, "Lemon", "Kiwi");   //(2=index, 0 = ทับกี่ตัว,..ของที่จะแทรก..)
+        console.log(fruits); // [ 'Banana', 'Orange', 'Lemon', 'Kiwi', 'Apple', 'Mango' ]
+
+        fruits.splice(2, 2, "Grape", "Melon");  //(indexที่ 2 , ทับตัวเดิม 2 ตัว,..ของที่จะแทรกทับลงไป..)
+        console.log(fruits); // [ 'Banana', 'Orange', 'Grape', 'Melon', 'Apple', 'Mango' ]
+
+    //Delete
+        fruits.splice(0, 2);                    //(indexที่ 0,ถึงindexที่ 2) = delete ออก
+        console.log(fruits); // [ 'Grape', 'Melon', 'Apple', 'Mango' ]   
+    ```
     * `fill()`
 * Searching and sorting methods
     * `indexOf()`= ใช้ search element ใน array แต่จะ return แค่ตัวเดียว+ตัวแรกที่หาเจอ

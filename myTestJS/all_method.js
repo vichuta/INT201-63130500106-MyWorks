@@ -63,6 +63,16 @@ const citrus = fruits.slice(1,3);
 console.log(fruits);
 console.log(citrus);
 
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+        const subarr1 = fruits.slice(1);    //เอาตัวที่ 1 ออก
+        const subarr2 = fruits.slice(3);    //เอาตัวแรกถึงตัวที่ 3 ออก
+        const subarr3 = fruits.slice(1,3);  //
+        
+        console.log(fruits);
+        console.log(subarr1);
+        console.log(subarr2);
+        console.log(subarr3);
+
 //concat    การสร้างอาร์เรย์ใหม่โดยการรวม (ต่อ) อาร์เรย์ที่มีอยู่
 const myGirls = ["Cecilie", "Lone"];
 const myBoys = ["Emil", "Tobias", "Linus"];
