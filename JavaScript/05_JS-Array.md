@@ -146,7 +146,14 @@
 * Array Iterator Methods
     * `forEach()`
     * `map()` 
-    * `filter()` = return เป็น subset ของ array
+    * `filter()` = ใช้คัดเลือก element ใน array **ต้องมี function มารองรับ**
+    ```JavaScript
+        let ages = [10,12,18,22,35,40,45,50,60];
+        function checkAge(age){ //age คือ element แต่ละตัวที่อยู่ใน ages
+            return age >=18;    //return age ที่มีค่าอย่างน้อย 18
+        }
+        console.log(ages.filter(checkAge));  //[18, 22, 35, 40, 45, 50, 60]
+    ```
     * `find()` = return element ทั้งหมดที่ตรงกับเงื่อนไข
     * `findIndex()` = return เป็น index ของ element นั้นๆ
     * `every()` and `some()`
