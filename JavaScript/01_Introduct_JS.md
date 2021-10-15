@@ -48,33 +48,7 @@
         JS              //ทำเป็นอันสุดท้าย เพราะมี delay 5000 ms
 ```
 ----
-## Higher-Order Functions
-   คือ ```function``` อย่างหนึ่งของ JavaScript ที่สามารถรับค่า parameter หรือ return เป็น function ได้
-   
-```javascript
-        function add(n1, n2) {
-          return n1 + n2
-        }
-    // 1. เก็บ fucntion ไว้ในตัวแปรได้
-        let sum = add // 1.
-        let addResult1 = add(10, 20)
-        let addResult2 = sum(10, 20)
-        console.log(`add result1: ${addResult1}`) //add result1: 30
-        console.log(`add result2: ${addResult2}`) //add result2: 30
-    //2. return ค่าเป็น value จาก function ได้
-        function operator(n1, n2, fn) {
-          return fn(n1, n2) 
-        }
-    //3. รับค่า parameter เป็น function ได้
-        function multiply(n1, n2) {
-          return n1 * n2
-        }
-        let addResult3 = operator(5, 3, add)
-        let multiplyResult = operator(5, 3, multiply)
-        console.log(`add result3 : ${addResult3}`)         //add result3: 8
-        console.log(`multiply result: ${multiplyResult}`)  //multiply result: 15
-```
-------
+
 
 
 
