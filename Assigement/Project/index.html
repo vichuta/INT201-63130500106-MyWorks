@@ -1,0 +1,77 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 800px;
+        max-height: 500px;
+        text-align: center;
+        font-family: arial;
+        background-color: white;
+        float: left;
+        margin: 50px;
+        padding: 50px;    
+      }
+      .price {
+        color: grey;
+        font-size: 22px;
+      }
+
+      .card button {
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+
+      }
+      .card button:hover {
+        opacity: 0.7;
+      }
+      body {
+        background-image: url('bg.jfif');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #heading {
+            text-align: center;
+      }
+      .center {
+        text-align: center;
+      }
+      </style>
+  </head>
+  <body>
+      <div id="heading">
+        <h1>ProductList</h1> 
+      </div>
+      <div id="menu-bar">
+        <img src="search_icon.jpg" width="20px" height="20px" id="icon">
+        <input type="hidden" id="searchBar">
+        <input type="hidden" id="btnSearch" value="Search">
+        <span id="numCart"></span>
+        
+      </div>
+      
+      <div id ="products">
+        <!-- <div id="${productFind.id}" class="card" style="display">
+          <img src = "${product.id}.jpg" width = "200">
+          <h1>${productFind.name}</h1>
+          <p class="price">$ ${productFind.price}</p>
+          <p>The color of this phone is ${productFind.color}"</p>
+          <p>Still have ${productFind.stock} units for sale.</p>
+          <a href="#" data-name="Lemon" data-price="5" class="add-to-cart btn btn-primary">Add to Cart</a>
+      </div> -->
+      </div>
+      <script src = "main.js" type="module">
+      </script>
+  </body>
+</html>
