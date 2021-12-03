@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      INT201-Test Basic JS
+    </title>
+    <h1>INT201-Test Basic Javascript by Vichuta Pipoppinyo</h1>
+    <h2>Mini Project</h2>
+    <hr />
+    <h3>Text String</h3>
+    <form action="/action_page.php">
+      <label for="num">Your choice(0-3) :</label><br />
+      <input type="text" id="num" name="num" /><br />
+      <label for="message">Your Text :</label><br />
+      <input type="text" id="message" name="message" /><br /><br />
+      <button onclick="TestString(num,message)">Click me</button>
+    </form>
+    <script>
+      function TestString(n, str) {
+        switch (n) {
+          case 0:
+            console.log(str); //print text
+            break;
+          case 1:
+            console.log(reverseString(str));
+            break;
+          case 2:
+            console.log(replaceString(str));
+            break;
+          case 3:
+            console.log(countVowel(str));
+            break;
+        }
+      }
+      //Reverse String
+      function reverseString(str) {
+        return str.split("").reverse().join("");
+        //split("") = ตัดแบ่งด้วย "" แล้วเป็น array
+        //reverse() = จะเรียง array แบบ reverse ให้ใหม่
+        //join("") = รวม array ให้เป็น String โดยใช้ "" คั่นระหว่าง object ใน array
+      }
+
+      //Replace Vowel with '*'
+      function replaceString(str) {
+        for (let i = 0; i < str.length; i++) {
+          for (let j = 0; j < vowel.length; j++) {
+            str = str.replace(vowel[j], "*");
+            //replace('a','b') = เปลี่ยน string ที่เป็น a ให้เป็น b ทั้งหมด
+          }
+        }
+        return str;
+      }
+
+      //Count vowels in String
+      function countVowel(str) {
+        let count = 0;
+        for (let i = 0; i < str.length; i++) {
+          for (let j = 0; j < vowel.length; j++) {
+            if (str.charAt(i) == vowel[j]) {
+              count++;
+            }
+          }
+        }
+        return count;
+      }
+    </script>
+    <script src="test_condition.js"></script>
+    <script src="../InClass/03_TestString.js"></script>
+  </head>
+  <body>
+    <h1>Hi weekend</h1>
+  </body>
+</html>
