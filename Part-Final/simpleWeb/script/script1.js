@@ -1,6 +1,7 @@
 import {subjects} from "../model/subject.js";
-import {register} from "../model/registrationTable.js";
+import {register} from "../model/registration.js";
 
+register.load();
 //get element
 const bodyTag = document.body;
 
@@ -19,13 +20,13 @@ document.querySelector('h1').style.color = '';
 */
 const divViewbar = document.createElement('div');
 divViewbar.setAttribute('id','view-bar');
-divViewbar.textContent = `รายวิชาที่ลงทะเบียน : ${register.totalCredit()}     `
+divViewbar.textContent = `รายวิชาที่ลงทะเบียน : ${register.studyTable.length}     `
 
 const alink =document.createElement('a');
 alink.setAttribute('href',"./home.html");
 alink.textContent = "ดูประวัตการลงทะเบียน";
 
-divViewbar.appendChild(alink);
+bodyTag.appendChild(alink);
 bodyTag.appendChild(divViewbar);
 
 //Add Node 3 : 
@@ -80,9 +81,11 @@ tableSubject.innerHTML =
 centerTag.appendChild(tableSubject)
 bodyTag.appendChild(centerTag);
 
-subjects.forEach(s => {
-    showSubject(s)
+
+subjects.forEach((subject) => {
+    showSubject(subject);
 });
+
 function showSubject(subject){
     let {subjectId,subjectName,subjectCredit,subjectSemester}= subject;
     const row = document.createElement('tr');
@@ -111,8 +114,9 @@ function showSubject(subject){
         register.save();
         col4.removeChild(buttonRegister);
         col4.textContent = "ลงทะเบียนแล้ว";
+        document.querySelector('#view-bar').textContent = `รายวิชาที่ลงทะเบียน : ${register.studyTable.length}     `;
     });
-
+    
     col4.appendChild(buttonRegister);
     row.appendChild(col1);
     row.appendChild(col2);
@@ -135,7 +139,7 @@ imgSearch.addEventListener('click',()=> {
 //Add Event Seraching
 function searching(){
     let keyword = inputSearch.value.toLocaleLowerCase();
-    subjects.filter((subject)=>{
+        subjects.filter((subject)=>{
         if(!(subject.subjectId.toLowerCase().includes(keyword)||subject.subjectName.toLowerCase().includes(keyword))){
             const notMatchingRow = document.querySelector(`#${subject.subjectId}`);
             notMatchingRow.style = "display:none;"
@@ -143,9 +147,22 @@ function searching(){
             const MatchingRow = document.querySelector(`#${subject.subjectId}`);
             MatchingRow.style = "display:;"
         }
+        });
+}
+inputSearch.addEventListener('blur',searching);
+buttonSearch.addEventListener('click',searching);
+
+function showButton(){
+    let registerList = register.list();
+    registerList.filter((study)=>{
+        if(!(study.subjectId.includes(registerList.subjectId))){
+            const MatchingId = document.querySelector(`#${study.subjectId}`);
+            console.log(MatchingId.lastElementChild.textContent = "ลงทะเบียนแล้ว");
+        }
     });
 }
-buttonSearch.addEventListener('click',searching);
+showButton();
+
 
 
 
