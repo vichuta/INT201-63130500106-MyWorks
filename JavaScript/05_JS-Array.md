@@ -144,6 +144,7 @@
 ```
 ## Array Methods
 1. Array Iterator Methods (มี 8 อัน) **ต้องมี function มารองรับ**
+    
     1.1 `forEach()` = ใช้วน loop ไล่อ่าน element แต่ละตัวใน array 
     ```JavaScript
         let numArray = [1,2,3,4,5];
@@ -201,9 +202,9 @@
 
     ```
     1.6 `every()` and `some()` => ใช้เช็คเงื่อนไขของ element ทุกตัวใน array แล้วจะ return --> ture / false
+    ```JavaScript
     //every() ต้องเป็น true ทุกตัว => return true / ถ้าเป็น false ตัวเดียว => return false          
     //some() ถ้าเป็น true ตัวเดียว => return true / แต้ถ้าเป็น false ทุกตัว => return false
-    ```JavaScript
         let numArray = [1,2,3,4,5]; 
 
         function checkNum(element,index,array){
@@ -254,6 +255,7 @@
    
     ```
 2. Stack and queue methods (มี 4 ตัว)
+    
     2.1 `push()` = เพิ่ม element ต่อท้าย array
     ```JavaScript
         let fruits = ["Banana", "Orange", "Apple", "Mango"];
@@ -281,6 +283,7 @@
         fruits.shift();         // Removes "Banana" from fruits
     ```
 3. Subarray methods  (มี 3 ตัว)
+    
     3.1 `slice()` = เลือก sub array โดยการอ้างผ่าน index ตัวเริ่มต้นที่จะเลือก กับ index ตัวสุดท้ายที่จะเลือก
     ```JavaScript
         let letters = ['A','B','C','D','E','F'];
@@ -334,6 +337,7 @@
         
     ```
 4. Searching and sorting methods (มี 4 ตัว)
+    
     4.1 `indexOf()`= ใช้ search element ใน array แต่จะ return แค่ตัวเดียว+ตัวแรกที่หาเจอ
     ```JavaScript
         //SynTax :  
@@ -368,7 +372,7 @@
         console.log(sortFruits);
         
         //Output: [ 'Apple', 'Banana', 'Mango', 'Orange' ]
-  //Sort Object ต้องเขียน function เพิ่ม
+    //Sort Object ต้องเขียน function เพิ่ม
     let drinks = [{name:'Water',price:5},{name:'Coke',price:12},{name:'Milk',price:20},{name:'Juice',price:15}];
     function sortByName(a,b){
         let nameA = a.name.toUpperCase();
@@ -414,6 +418,7 @@
         
     ```
 5. Array to String Conversions
+    
     5.1 `join()` = แปลง element -> String เช่น `['H','i']`--> `'Hi'`
     ```JavaScript
         let fruits = ["Banana", "Apple", "Mango", "Orange"]
@@ -430,6 +435,7 @@
         //[ 'Hello', 'Final', 'Exam', 'INT201' ]
     ```
 6. Other Array method
+    
     6.1 `concat()` = ใช้ Array รวมตัวแปรเข้าด้วยกัน แล้ว return --> Array
     ```JavaScript
         let letter1 = ['A','B','C','D'];
