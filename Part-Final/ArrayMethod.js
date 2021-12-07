@@ -9,9 +9,9 @@
     
     function sumArray(e){  
         sum = sum + e; 
-        console.log(sum)
+        return sum;
     }
-    numArray.forEach(sumArray);                     //แบบที่ 2 
+    let sumview = numArray.forEach(sumArray);                     //แบบที่ 2 
     
     //Output 
     //(แบบที่ 1) 1 2 3 4 5

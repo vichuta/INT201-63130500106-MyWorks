@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body{
+            margin: 3%;
+            background-color: lightslategrey;
+        }
+        .searchbar{
+          vertical-align: super;
+        }
+        .grid-container {
+          display: grid;
+          grid-gap: 10px;
+          grid-template-columns: auto auto auto;
+          background-color: darkgrey;
+          padding: 10px;
+        }
+        .grid-item {
+          background-color: white;
+          padding: 20px;
+          text-align: center;
+        }
+</style>
+    </style>
+    <script src="script.js"></script>
+  </head>
+  <body>
+      <h1>My Website</h1>
+      
+      <div id="cart-bar" style="float: right; display: inline;">
+        <img id="iconCart" src="./img/cart.png" width="30px">
+        <h3 style="display: inline;">Item your cart : 0</h3>
+        <img id="iconBin" src ="./img/bin.png" width="30px">
+      </div>
+      
+      <div id="search-bar">
+          <span><img id="iconSearch" src="./img/search.png" width="30px"></span>
+          <input id="inputSearch" class="searchbar" type ="text" style="display:none;">
+          <button id="buttonSearch" class="searchbar" style="display:none;">search</button>
+      </div>
+      
+      <h2 style="display: inline;">Product::</h2>
+      
+      <div id="product-list" class="grid-container">
+        <div id="P001" class="grid-item">
+          <img src="./img/P001.png" width="75%">
+          <h3>productName</h3>
+          <p>productDesc</p>
+          <p>Price</p>
+        </div>
+        <div id="P002" class="grid-item">
+          <img src="./img/P002.png" width="75%">
+          <h3>productName</h3>
+          <p>productDesc</p>
+          <p>Price</p>
+        </div>
+        <div id="P003" class="grid-item">
+          <img src="./img/P003.png" width="75%">
+          <h3>productName</h3>
+          <p>productDesc</p>
+          <p>Price</p>
+        </div>
+      </div>
+
+  </body>
+</html>
+
+<!-- 1?ลองวาด Node จากไฟล์ html นี้ แล้วระบุว่าอะไรเป็น Document/Element/Attribute/Text-->
