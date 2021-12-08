@@ -20,7 +20,7 @@ document.querySelector('h1').style.color = '';
 */
 const divViewbar = document.createElement('div');
 divViewbar.setAttribute('id','view-bar');
-divViewbar.textContent = `รายวิชาที่ลงทะเบียน : ${register.studyTable.length}     `
+divViewbar.textContent = `รายวิชาที่ลงทะเบียน : ${register.studyTable.length}   วิชา   `
 
 const alink =document.createElement('a');
 alink.setAttribute('href',"./home.html");
