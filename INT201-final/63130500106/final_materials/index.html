@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes for Buying Items</title>
+  </head>
+  <body>
+    <div class="buying-container">
+      <!-- form -->
+      <h2>Buying Items</h2>
+      <p>Add items you want to buy.</p>
+      <form class="buying-form" style="line-height: 180%">
+        <div class="buying-input-container">
+          <input type="text" id="item" placeholder="e.g. milk" />
+          <input type="number" id="qty" min="0" max="100" value="1" />
+          <label for="qty">unit (s)</label>
+        </div>
+        <button type="button" id="btn-submit">submit</button>
+      </form>
+      <!--Buying list -->
+      <div class="buying-list-container">
+        <h3>Your Buying List</h3>
+        <p>
+          (Pending:
+          <span id="countPendingItems" style="color: red">0</span> items,
+          Done:<span id="countDoneItems" style="color: red">0</span> items)
+        </p>
+        <!--Pending Items-->
+        <ol id="buying-list" style="line-height: 180%"></ol>
+        <button id="btn-clear">clear items</button>
+      </div>
+    </div>
+    <!-- JavaScript -->
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
